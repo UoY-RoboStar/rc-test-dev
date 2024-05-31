@@ -11,7 +11,17 @@ These instructions are for a Linux environment, in particular Ubuntu LTS 22.04 (
    determine whether you're running under Wayland, you can query the value of the environment variable `XDG_SESSION_TYPE`, for
    example, by running the command `echo $XDG_SESSION_TYPE` in a terminal.
 
-## Setting up RoboTool development environment for working with trace generator
+## RoboTool plug-ins
+The following is a description of plug-ins required and used for calculating forbidden traces and targetting
+the automatic generation of test drivers for ROS.
+
+### Forbidden trace generation (robochart-trace-gen)
+
+### Forbidden trace grammar and conversion (robotest-textual)
+
+### ROS component test generation (robotest-ros-gen)
+
+### Setting up RoboTool development environment for developing plug-ins
 Following on from the steps above, then:
 
 1. Select `Help` > `About Eclipse IDE` > `Installation Details` and select the feature `RoboChart Trace Generator` in the
