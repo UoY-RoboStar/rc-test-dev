@@ -6,14 +6,15 @@ These instructions are for a Linux environment, in particular Ubuntu LTS 22.04 (
 
 1. Download the latest RoboTool packaged release from the [robotool repository](https://github.com/UoY-RoboStar/robotool/releases).
 2. Extract the archive.
-3. If running under Wayland, start Eclipe from the command line ensuring it is run in X11 mode by prepending setting the `GDK_BACKEND`
-   environment variable to `x11`, that is, by using the command `GDK_BACKEND=x11 ./eclipse`. Otherwise, start Eclipse normally. To
+3. If running under Wayland, start Eclipe from the command line ensuring it is running in X11 mode, to avoid potential incompatibilities,
+   by setting the `GDK_BACKEND` environment variable to `X11`, that is, by using the command `GDK_BACKEND=X11 ./eclipse`. Otherwise, start Eclipse normally. To
    determine whether you're running under Wayland, you can query the value of the environment variable `XDG_SESSION_TYPE`, for
    example, by running the command `echo $XDG_SESSION_TYPE` in a terminal.
 
 ## RoboTool plug-ins
 The following is a description of plug-ins required and used for: (1) calculating forbidden traces; and (2) 
-generating test drivers, that is ROS nodes, that can be used to test ROS software nodes.
+generating test drivers, that is ROS nodes, that can be used to test ROS software nodes. Setting up of an
+environment for working on their development is deferred to later in the document.
 
 ### Forbidden trace generation (robochart-trace-gen)
 This plug-in generates forbidden traces of a finite size from a RoboChart component, such as State Machines, Controllers and Modules. These are
