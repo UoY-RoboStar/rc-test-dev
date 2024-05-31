@@ -12,12 +12,35 @@ These instructions are for a Linux environment, in particular Ubuntu LTS 22.04 (
    example, by running the command `echo $XDG_SESSION_TYPE` in a terminal.
 
 ## RoboTool plug-ins
-The following is a description of plug-ins required and used for calculating forbidden traces and targetting
-the automatic generation of test drivers for ROS.
+The following is a description of plug-ins required and used for: (1) calculating forbidden traces; and (2) 
+generating test drivers, that is ROS nodes, that can be used to test ROS software nodes.
 
 ### Forbidden trace generation (robochart-trace-gen)
+This plug-in generates forbidden traces of a finite size from a RoboChart component, such as State Machines, Controllers and Modules. These are
+sequences of interaction that end in an event that is forbidden by the model.
+
+The current implementation can only currently generate untimed forbidden traces. For this, it uses the CSP semantics automatically calculated by
+RoboTool and the FDR model-checker. FDR creates a graph representation of the underlying operational semantics of CSP,
+which is then used to calculate, at every state in the graph, what events are forbidden. To facilitate this calculation,
+the plug-in uses a version of CSP processes with a compression function called `diamond` that guarantees there are no `tau`
+(silent) transitions in the graph, thus making the implementation much simpler, at the cost, of potentially having to
+perform more calculations upfront.
+
+Given the name of the desired RoboChart component, the plug-in outputs a file of the same name with an extension `.rtest`, under the folder
+`test-gen` by default, containing a set of forbidden traces up to the length specified. The syntax of the traces follows that of CSPM
+expressions, and can be parsed by the plug-in [robotest-textual](https://github.com/UoY-RoboStar/robotest-textual), described below.
+
+#### Dependencies
+This plug-in requires FDR4 to be installed in a path known to the plug-in. In particular, it interfaces with FDR by
+loading a `fdr.jar` file, via JNI. FDR cannot be distributed standalone, so this dependency cannot be shipped with RoboTool.
+
+#### Outstanding implementation issues
+1. The plug-in relies on a fixed location for finding the `fdr.jar` as defined in its `MANIFEST.MF`. It should be possible to load this dynamically,
+   possibly by allowing users at run-time to provide the location for FDR, as already captured by the `robochart-textual` plug-in options.
+2. Use of JNI with `fdr.jar` seems to have issues with reclaiming back memory from FDR, even after it has been terminated and exited.
 
 ### Forbidden trace grammar and conversion (robotest-textual)
+This plug-in
 
 ### ROS component test generation (robotest-ros-gen)
 
