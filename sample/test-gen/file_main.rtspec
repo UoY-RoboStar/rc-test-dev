@@ -1,0 +1,25 @@
+// Tests for RoboChart component 'stm0' with length up to 2
+// Format: t0, ..., tn, fevent
+// <t0,...,tn> is a valid trace followed by a 'fevent' that is forbidden
+cspm stm0_traces associated to stm0 {
+t0: stm0::outp.out.Value_High
+t1: stm0::outp.out.Value_Low
+t2: stm0::inp.in.0, stm0::inp.in.0
+t3: stm0::inp.in.0, stm0::inp.in.1
+t4: stm0::inp.in.0, stm0::inp.in.2
+t5: stm0::inp.in.0, stm0::outp.out.Value_High
+t6: stm0::inp.in.0, stm0::outp.out.Value_Low, stm0::outp.out.Value_High
+t7: stm0::inp.in.0, stm0::outp.out.Value_Low, stm0::outp.out.Value_Low
+t8: stm0::inp.in.1, stm0::inp.in.0
+t9: stm0::inp.in.1, stm0::inp.in.1
+t10: stm0::inp.in.1, stm0::inp.in.2
+t11: stm0::inp.in.1, stm0::outp.out.Value_High
+t12: stm0::inp.in.1, stm0::outp.out.Value_Low, stm0::outp.out.Value_High
+t13: stm0::inp.in.1, stm0::outp.out.Value_Low, stm0::outp.out.Value_Low
+t14: stm0::inp.in.2, stm0::inp.in.0
+t15: stm0::inp.in.2, stm0::inp.in.1
+t16: stm0::inp.in.2, stm0::inp.in.2
+t17: stm0::inp.in.2, stm0::outp.out.Value_High
+t18: stm0::inp.in.2, stm0::outp.out.Value_Low, stm0::outp.out.Value_High
+t19: stm0::inp.in.2, stm0::outp.out.Value_Low, stm0::outp.out.Value_Low
+}

@@ -1,0 +1,196 @@
+
+rule Top
+	transform o : Source!RoboChartCSPMTraces
+	to t : Target!RoboChartTraces
+{
+	t.roboTraces = o.roboTraces.equivalent();
+	t.name = o.name + "mod";
+	t.element = o.element;
+}
+
+@lazy
+rule RCSPMTrace2RCTrace 
+	transform o : Source!RCSPMTrace
+	to t : Target!RCTrace
+	{
+		t.name = o.name;
+		t.events = o.events.equivalent();
+		"RCSPMTrace2RCTrace".println();
+}
+
+@lazy
+rule RCSPMevent2RCEvent_Event_Enumeration
+	transform o : Source!RCSPMEventRef
+	to t : Target!RTRCEvent
+	{
+		guard : o.ref.isKindOf(Source!Event) 
+		//and
+		//		o.ref.type.isKindOf(Source!TypeRef)
+				
+		o.expression.~target = o.ref.type;
+		t.ref = o.ref;
+		t.inout = o.inout;
+		t.expression = o.expression.equivalent();
+		
+//		
+//				 and
+//				o.ref.type.ref.isKindOf(Source!Enumeration) and
+//				
+//				
+//				o.expression.isKindOf(Source!LiteralExp) and
+//				o.ref.type.ref.name == o.expression.value.split("_").first()
+//
+//		// Maybe we do want to call on a rule to translate the expression,
+//		// rather than map directly here the LiteralExp.
+//		t.ref = o.ref;
+//		t.inout = o.inout;
+//		
+//		var enumexp = new Target!EnumExp();
+//		enumexp.type = o.ref.type.ref;
+//		enumexp.literal = o.ref.type.ref.literals.selectOne(e:Source!Literal|e.name == o.expression.value.split("_").second());
+//		
+//		t.expression = enumexp;
+		("Event: "+o.ref.name).println();
+}
+
+//@lazy
+//rule RCSPMevent2RCEvent_Event_Enumeration
+//	transform o : Source!RCSPMEvent
+//	to t : Target!RTRCEvent
+//	{
+//		guard : o.ref.isKindOf(Source!Event) and
+//				o.ref.type.isKindOf(Source!TypeRef) and
+//				o.ref.type.ref.isKindOf(Source!RecordType) and
+//				o.expression.isKindOf(Source!LiteralExp) and
+//				o.ref.type.ref.name == o.expression.value.split("_").first()
+//	}
+//}
+
+//@lazy
+//rule RCSPMevent2RCEvent_Event_RecordExp
+//	transform o : Source!RCSPMEvent
+//	to t : Target!RTRCEvent
+//	{
+//		// guard on the type of the event pointed to.
+//		guard : o.ref.isKindOf(Source!Event) and
+//				Source!Enumeration.allInstances().exists(e:Source!Enumeration|e.name == o.value.split("_").first())
+//		t.ref = o.ref;
+//		t.inout = o.inout;
+//		t.expression = o.expression.equivalent();
+//		//("Event: "+o.ref.name).println();
+//}
+
+rule RCSPMevent2RCEvent_OperationCall
+	transform o : Source!RCSPMOperationCallRef
+	to t : Target!RTRCEvent
+	{
+		guard : o.expression.isKindOf(Source!RTDotExp) and o.expression.args.size() == o.ref.parameters.size()
+				
+		("Call: " + o.ref.name).println();
+		t.inout = o.inout;
+		
+//		var call = new Target!CallExp;
+//		call.`function` = o.ref;
+		
+		var noArgs = o.expression.args.size();
+		
+		for (i : Int in noArgs) {
+			o.expression.args[i].~target = o.ref.parameters[i].type;
+			t.args[i] = o.expression.args[i].equivalent();
+		}
+		
+}
+
+rule RCSPMevent2RCEvent_OperationCall_OneArg
+	transform o : Source!RCSPMOperationCallRef
+	to t : Target!RTRCEvent
+	{
+		guard : o.ref.parameters.size() == 1
+				
+		("Call2: " + o.ref.name).println();
+		
+		t.ref = o.ref;
+		o.expression.~target = o.ref.parameters[0].type;
+		var exp = o.expression.equivalent();
+		("Exp: " + exp).println();
+		t.args.add(exp);
+}
+
+// Only one integer.
+@lazy
+rule Integer2RecordExp
+	transform o : Source!RTIntegerExp
+	to t : Target!RecordExp
+	{
+		guard: 	o.~target <> null and
+				o.~target.isKindOf(Source!TypeRef) and
+				o.~target.ref.isKindOf(Source!RecordType)
+				
+		("Integer2RecordExp: " + o.value).println();
+		t.record = o.~target.ref;
+		
+		var field = new Target!FieldDefinition;
+		field.field = t.record.fields.first();
+		field.value = o.equivalent("IntegerExp");
+		("Field: "+ field.field).println();
+		("Value: "+ field.value).println();
+		t.definitions.add(field);
+		
+}
+
+@lazy
+rule LiteralExp2Enu
+	transform o : Source!RTLiteralExp
+	to t : Target!EnumExp
+	{
+		// Only applicable if first string indicates an Enumeration!
+		guard: 	o.~target <> null and
+				o.~target.isKindOf(Source!TypeRef) and
+				o.~target.ref.isKindOf(Source!Enumeration) and
+				o.~target.ref.name == o.value.split("_").first()
+//				
+//				Source!Enumeration.allInstances().exists(e:Source!Enumeration|
+//				e.name == o.value.split("_").first() 
+//				and 
+//				e.literals.exists(l:Source!Literal | l.name == o.value.split("_").second()))
+////				.collect(e:Source!Enumeration|e.name)
+//	//			.contains(o.value.split("_").first())
+//				
+		
+		"Match in LiteralExp2Enu".println();
+		
+//		var enum = Source!Enumeration.allInstances().selectOne(e:Source!Enumeration|e.name == o.value.split("_").first());
+//		// Need to check what to map into.
+//		var literal = enum.literals.selectOne(l:Source!Literal | l.name == o.value.split("_").second());
+//		
+		t.type = o.~target.ref;
+		t.literal = o.~target.ref.literals.selectOne(e:Source!Literal|e.name == o.value.split("_").second());
+//		enumexp.literal = o.ref.type.ref.literals.selectOne(e:Source!Literal|e.name == o.expression.value.split("_").second());
+//		
+
+		("Literal:"+ t.literal.name).println();
+		("Enum:" + t.type.name).println();
+//		t.type = enum;
+//		t.literal = literal;
+}
+
+//@lazy
+//rule LiteralExp2Enu
+//	transform o : Source!LiteralExp
+//	to t : Target!EnumExp
+//	{
+//		guard : 
+//	}
+
+@lazy
+rule IntegerExp
+	transform o : Source!RTIntegerExp
+	to t : Target!IntegerExp
+	{
+		("IntegerExp: " + o.value).println();
+		t.value = o.value;
+		("IntegerExp: " + t.value).println();
+}
+	
+	
+	

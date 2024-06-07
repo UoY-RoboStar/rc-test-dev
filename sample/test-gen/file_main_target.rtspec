@@ -1,0 +1,22 @@
+rc stm0_tracesmod associated to stm0 {
+t0 :outp.out. Value :: High
+t1 :outp.out. Value :: Low
+t2 :inp.in. 0 ,inp.in. 0
+t3 :inp.in. 0 ,inp.in. 1
+t4 :inp.in. 0 ,inp.in. 2
+t5 :inp.in. 0 ,outp.out. Value :: High
+t6 :inp.in. 0 ,outp.out. Value :: Low ,outp.out. Value :: High
+t7 :inp.in. 0 ,outp.out. Value :: Low ,outp.out. Value :: Low
+t8 :inp.in. 1 ,inp.in. 0
+t9 :inp.in. 1 ,inp.in. 1
+t10 :inp.in. 1 ,inp.in. 2
+t11 :inp.in. 1 ,outp.out. Value :: High
+t12 :inp.in. 1 ,outp.out. Value :: Low ,outp.out. Value :: High
+t13 :inp.in. 1 ,outp.out. Value :: Low ,outp.out. Value :: Low
+t14 :inp.in. 2 ,inp.in. 0
+t15 :inp.in. 2 ,inp.in. 1
+t16 :inp.in. 2 ,inp.in. 2
+t17 :inp.in. 2 ,outp.out. Value :: High
+t18 :inp.in. 2 ,outp.out. Value :: Low ,outp.out. Value :: High
+t19 :inp.in. 2 ,outp.out. Value :: Low ,outp.out. Value :: Low
+}
