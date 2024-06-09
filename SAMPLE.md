@@ -1,6 +1,6 @@
-# Sample
-This document provides a walk-through for performing model-based testing of a ROS node from a RoboChart component.
-It may be useful to first read through the documentation in [robotest-ros-gen](https://github.com/UoY-RoboStar/robotest-ros-gen).
+# Sample tutorial
+This document provides a walk-through tutorial for performing model-based testing of a ROS node from a RoboChart component.
+It may be useful to also read through the documentation in [robotest-ros-gen](https://github.com/UoY-RoboStar/robotest-ros-gen), in addition, to this mini-tutorial.
 
 ## Requirements
 * RoboTool installed using the latest release from the [robotool repository](https://github.com/UoY-RoboStar/robotool/releases/).
