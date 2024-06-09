@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<launch>
-  <node name="t16" pkg="map_MM_suite_t16" type="node" output="screen"/>
-</launch>
