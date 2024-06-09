@@ -31,7 +31,7 @@ def callback_input(data):
 	output = Output()
 	output.stamp = rospy.get_rostime()
 	
-	if (data.value < 5):
+	if (data.value > 5):
 		output.value = 0
 	else:
 		output.value = 1
