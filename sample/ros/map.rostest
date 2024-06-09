@@ -1,0 +1,15 @@
+package map
+
+test mapping MM {
+	node sample::sample
+	component stm0
+	
+	// Inputs
+	topic input implements inp with acceptance as input_accepted
+	
+	// Outputs
+	topic output implements outp
+}
+for MM generate suite MM_suite of tests {
+	stm0_tracesmod::t0 through stm0_tracesmod::t19
+}

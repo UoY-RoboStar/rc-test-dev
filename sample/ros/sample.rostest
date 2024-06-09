@@ -1,0 +1,11 @@
+package sample
+
+msg Output
+msg InputAccepted
+msg Input
+
+node sample {
+	publishes topic output of type Output
+	publishes topic input_accepted of type InputAccepted
+	subscribes topic input of type Input 
+}
