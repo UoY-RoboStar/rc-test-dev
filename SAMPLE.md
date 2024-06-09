@@ -29,11 +29,11 @@ For this task first ensure FDR4 is installed and has it license active. To ensur
 open FDR4 on its own and follow the instructions.
 
 To generate forbidden traces:
-1. expand the `main.rct` file, in the `Model explorer` shown on the
+1. Expand the `main.rct` file, in the `Model explorer` shown on the
    left, until the component `State Machine Def stm0` shows up.
-2. Right-click on the component, and select RoboTool. You may to
+2. Right-click on the component, and select RoboTool. You may need to
    select it twice in order for the additional options to show up.
-3. Select `Testgen`. If everything is working correctly, you'll be
+3. Select `Testgen`. You should be
    asked to select how many events to include in the forbidden traces.
 4. After the generation has completed, a file of the name `file_main.rtspec`
    will automatically be re-generated under the folder `test-gen`. Note that
@@ -53,7 +53,7 @@ the corresponding event in the RoboChart textual representation of the model.
 
 ### Exercise 2
 Open the file `csp-gen/instantiations.csp` and change the line `core_nat` from the default to
-`nametype core_nat = {0..6}'. Re-generate the forbidden traces. 
+`nametype core_nat = {0..6}`. Re-generate the forbidden traces. 
 
 1. Consider how the forbidden traces have changed and ensure you understand why.
 2. Are there values related to the output that are now covered by the list of traces? 
