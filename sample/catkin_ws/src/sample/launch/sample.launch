@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+  <group ns="sample">
+    <node name="sample" pkg="sample" type="main.py" output="screen"/>
+  </group>
+</launch>
