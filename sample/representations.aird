@@ -10,6 +10,9 @@
     <semanticResources>test-gen/file_main_target.rtspec</semanticResources>
     <semanticResources>ros/sample.rostest</semanticResources>
     <semanticResources>ros/map.rostest</semanticResources>
+    <semanticResources>catkin_ws/src/sample/msg/Output.msg</semanticResources>
+    <semanticResources>catkin_ws/src/sample/msg/Input.msg</semanticResources>
+    <semanticResources>catkin_ws/src/sample/msg/InputAccepted.msg</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_UUkaMCTEEe-pAueXj1Cdgw">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/circus.robocalc.robochart.graphical/description/robochart.odesign#//@ownedViewpoints[name='RoboChartID']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_UVeZICTEEe-pAueXj1Cdgw" name="main.rct" repPath="#_UVKQECTEEe-pAueXj1Cdgw" changeId="ce89c9c0-a7b2-437c-a84d-53d0b6f91def">

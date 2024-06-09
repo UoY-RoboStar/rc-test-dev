@@ -1,6 +1,6 @@
 package map
 
-test mapping MM {
+test mapping mm {
 	node sample::sample
 	component stm0
 	
@@ -10,6 +10,6 @@ test mapping MM {
 	// Outputs
 	topic output implements outp
 }
-for MM generate suite MM_suite of tests {
+for mm generate suite mm_suite of tests {
 	stm0_tracesmod::t0 through stm0_tracesmod::t19
 }
