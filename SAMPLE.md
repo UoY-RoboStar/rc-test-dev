@@ -59,7 +59,7 @@ Open the file `csp-gen/instantiations.csp` and change the line `core_nat` from t
 2. Are there values related to the output that are now covered by the list of traces? 
    Consider the definition of `core_nat` that you changed.
 
-## Tranforming traces for input to the ROS test generator
+## Transforming traces for input to the ROS test generator
 To make the traces in a format suitable for the ROS test generator their syntax needs to be converted.
 
 ### Exercise 1
