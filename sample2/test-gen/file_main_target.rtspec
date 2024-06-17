@@ -1,0 +1,5 @@
+rc stm0_tracesmod associated to stm0 {
+t0 :outp.out. 0
+t1 :outp.out. 2
+t2 :inp.in. Value :: High, outp.out.0 
+}

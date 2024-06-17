@@ -1,0 +1,36 @@
+interface IEvents {
+	event inp : Value
+	event outp : int
+}
+
+enumeration Value { High Low } 
+
+stm stm0 {
+	uses IEvents var x : Value
+	initial i0
+	state s0 {
+	}
+	transition t0 {
+		from i0
+		to s0
+	}
+junction j0
+	transition t1 {
+		from s0
+		to j0
+		trigger inp ? x
+	}
+	transition t2 {
+		from j0
+		to s0
+	condition x == High
+		action outp ! 5
+	}
+	transition t3 {
+		from j0
+		to s0
+		condition x == Low
+		action outp ! 2 
+	}
+}
+
