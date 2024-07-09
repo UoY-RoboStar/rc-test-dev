@@ -1,3 +1,18 @@
+/********************************************************************************
+ * Copyright (c) 2024 University of York and others
+ *
+ * Converter between RoboChartCSPMTraces and RoboChartTraces.
+ * 
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ * 
+ * SPDX-License-Identifier: EPL-2.0
+ * 
+ * Contributors:
+ *   Pedro Ribeiro - initial definition
+ *
+ ********************************************************************************/
 
 rule Top
 	transform o : Source!RoboChartCSPMTraces
@@ -15,82 +30,33 @@ rule RCSPMTrace2RCTrace
 	{
 		t.name = o.name;
 		t.events = o.events.equivalent();
-		"RCSPMTrace2RCTrace".println();
 }
 
 @lazy
 rule RCSPMevent2RCEvent_Event_Enumeration
 	transform o : Source!RCSPMEventRef
-	to t : Target!RTRCEvent
+	to t : Target!RTRCEventRef
 	{
 		guard : o.ref.isKindOf(Source!Event) 
-		//and
-		//		o.ref.type.isKindOf(Source!TypeRef)
 				
 		o.expression.~target = o.ref.type;
 		t.ref = o.ref;
 		t.inout = o.inout;
 		t.expression = o.expression.equivalent();
-		
-//		
-//				 and
-//				o.ref.type.ref.isKindOf(Source!Enumeration) and
-//				
-//				
-//				o.expression.isKindOf(Source!LiteralExp) and
-//				o.ref.type.ref.name == o.expression.value.split("_").first()
-//
-//		// Maybe we do want to call on a rule to translate the expression,
-//		// rather than map directly here the LiteralExp.
-//		t.ref = o.ref;
-//		t.inout = o.inout;
-//		
-//		var enumexp = new Target!EnumExp();
-//		enumexp.type = o.ref.type.ref;
-//		enumexp.literal = o.ref.type.ref.literals.selectOne(e:Source!Literal|e.name == o.expression.value.split("_").second());
-//		
-//		t.expression = enumexp;
-		("Event: "+o.ref.name).println();
+		//("Event: "+o.ref.name).println();
 }
 
-//@lazy
-//rule RCSPMevent2RCEvent_Event_Enumeration
-//	transform o : Source!RCSPMEvent
-//	to t : Target!RTRCEvent
-//	{
-//		guard : o.ref.isKindOf(Source!Event) and
-//				o.ref.type.isKindOf(Source!TypeRef) and
-//				o.ref.type.ref.isKindOf(Source!RecordType) and
-//				o.expression.isKindOf(Source!LiteralExp) and
-//				o.ref.type.ref.name == o.expression.value.split("_").first()
-//	}
-//}
-
-//@lazy
-//rule RCSPMevent2RCEvent_Event_RecordExp
-//	transform o : Source!RCSPMEvent
-//	to t : Target!RTRCEvent
-//	{
-//		// guard on the type of the event pointed to.
-//		guard : o.ref.isKindOf(Source!Event) and
-//				Source!Enumeration.allInstances().exists(e:Source!Enumeration|e.name == o.value.split("_").first())
-//		t.ref = o.ref;
-//		t.inout = o.inout;
-//		t.expression = o.expression.equivalent();
-//		//("Event: "+o.ref.name).println();
-//}
-
+// Converts a call with arguments.
+@lazy
 rule RCSPMevent2RCEvent_OperationCall
 	transform o : Source!RCSPMOperationCallRef
-	to t : Target!RTRCEvent
+	to t : Target!RTRCOperationRef
 	{
-		guard : o.expression.isKindOf(Source!RTDotExp) and o.expression.args.size() == o.ref.parameters.size()
+		guard : o.expression.isKindOf(Source!RTDotExp) 
+			and o.expression.args.size() == o.ref.parameters.size()
 				
 		("Call: " + o.ref.name).println();
 		t.inout = o.inout;
-		
-//		var call = new Target!CallExp;
-//		call.`function` = o.ref;
 		
 		var noArgs = o.expression.args.size();
 		
@@ -101,22 +67,18 @@ rule RCSPMevent2RCEvent_OperationCall
 		
 }
 
-rule RCSPMevent2RCEvent_OperationCall_OneArg
+@lazy
+rule RCSPMevent2RCEvent_OperationCall
 	transform o : Source!RCSPMOperationCallRef
-	to t : Target!RTRCEvent
+	to t : Target!RTRCOperationRef
 	{
-		guard : o.ref.parameters.size() == 1
+		guard : o.expression == null and o.ref.parameters.size() == 0
 				
-		("Call2: " + o.ref.name).println();
-		
+		("Call no args: " + o.ref.name).println();
 		t.ref = o.ref;
-		o.expression.~target = o.ref.parameters[0].type;
-		var exp = o.expression.equivalent();
-		("Exp: " + exp).println();
-		t.args.add(exp);
 }
 
-// Only one integer.
+// Converts an integer exp making use of record types
 @lazy
 rule Integer2RecordExp
 	transform o : Source!RTIntegerExp
@@ -126,18 +88,19 @@ rule Integer2RecordExp
 				o.~target.isKindOf(Source!TypeRef) and
 				o.~target.ref.isKindOf(Source!RecordType)
 				
-		("Integer2RecordExp: " + o.value).println();
+		//("Integer2RecordExp: " + o.value).println();
 		t.record = o.~target.ref;
 		
 		var field = new Target!FieldDefinition;
 		field.field = t.record.fields.first();
 		field.value = o.equivalent("IntegerExp");
-		("Field: "+ field.field).println();
-		("Value: "+ field.value).println();
+		//("Field: "+ field.field).println();
+		//("Value: "+ field.value).println();
 		t.definitions.add(field);
 		
 }
 
+// Converts literals into enum exprs.
 @lazy
 rule LiteralExp2Enu
 	transform o : Source!RTLiteralExp
@@ -148,40 +111,18 @@ rule LiteralExp2Enu
 				o.~target.isKindOf(Source!TypeRef) and
 				o.~target.ref.isKindOf(Source!Enumeration) and
 				o.~target.ref.name == o.value.split("_").first()
-//				
-//				Source!Enumeration.allInstances().exists(e:Source!Enumeration|
-//				e.name == o.value.split("_").first() 
-//				and 
-//				e.literals.exists(l:Source!Literal | l.name == o.value.split("_").second()))
-////				.collect(e:Source!Enumeration|e.name)
-//	//			.contains(o.value.split("_").first())
-//				
 		
-		"Match in LiteralExp2Enu".println();
-		
-//		var enum = Source!Enumeration.allInstances().selectOne(e:Source!Enumeration|e.name == o.value.split("_").first());
-//		// Need to check what to map into.
-//		var literal = enum.literals.selectOne(l:Source!Literal | l.name == o.value.split("_").second());
-//		
+		"Match in LiteralExp2Enu".println();		
 		t.type = o.~target.ref;
 		t.literal = o.~target.ref.literals.selectOne(e:Source!Literal|e.name == o.value.split("_").second());
-//		enumexp.literal = o.ref.type.ref.literals.selectOne(e:Source!Literal|e.name == o.expression.value.split("_").second());
-//		
 
 		("Literal:"+ t.literal.name).println();
 		("Enum:" + t.type.name).println();
-//		t.type = enum;
-//		t.literal = literal;
+
 }
 
-//@lazy
-//rule LiteralExp2Enu
-//	transform o : Source!LiteralExp
-//	to t : Target!EnumExp
-//	{
-//		guard : 
-//	}
 
+// Converts regular integer expressions
 @lazy
 rule IntegerExp
 	transform o : Source!RTIntegerExp
@@ -191,6 +132,13 @@ rule IntegerExp
 		t.value = o.value;
 		("IntegerExp: " + t.value).println();
 }
-	
-	
+
+@lazy
+rule MinusExp
+	transform o : Source!RTMinusExp
+	to t : Target!Neg
+	{
+		("MinusExp: " + o.value).println();
+		t.exp = o.value.equivalent();
+}	
 	
