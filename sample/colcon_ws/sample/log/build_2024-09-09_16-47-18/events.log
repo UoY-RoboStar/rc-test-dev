@@ -1,0 +1,51 @@
+[0.000000] (-) TimerEvent: {}
+[0.000431] (-) JobUnselected: {'identifier': 'py_node'}
+[0.000454] (sample_interface) JobQueued: {'identifier': 'sample_interface', 'dependencies': OrderedDict()}
+[0.000466] (sample_interface) JobStarted: {'identifier': 'sample_interface'}
+[0.007007] (sample_interface) JobProgress: {'identifier': 'sample_interface', 'progress': 'cmake'}
+[0.007159] (sample_interface) Command: {'cmd': ['/usr/bin/cmake', '/home/alex/git/rc-test-dev/sample/colcon_ws/sample/src/sample_interface', '-DCMAKE_INSTALL_PREFIX=/home/alex/git/rc-test-dev/sample/colcon_ws/sample/install/sample_interface'], 'cwd': '/home/alex/git/rc-test-dev/sample/colcon_ws/sample/build/sample_interface', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_GB:en'), ('USER', 'alex'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/alex'), ('OLDPWD', '/home/alex/git/rc-test-dev/sample/colcon_ws'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1232'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_colcon_cd_root', '/opt/ros/humble/'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'alex'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'alex'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/alex-QEMU-Virtual-Machine:@/tmp/.ICE-unix/1197,unix/alex-QEMU-Virtual-Machine:/tmp/.ICE-unix/1197'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/5ea44d4a_a77e_43e7_85ba_b03d73c27ebc'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.P8RQT2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.123'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/alex/git/rc-test-dev/sample/colcon_ws/sample/build/sample_interface'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.099305] (sample_interface) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.099917] (-) TimerEvent: {}
+[0.168371] (sample_interface) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.175872] (sample_interface) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.200032] (-) TimerEvent: {}
+[0.217042] (sample_interface) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.221941] (sample_interface) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.222360] (sample_interface) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.223032] (sample_interface) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.226603] (sample_interface) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.271577] (sample_interface) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.275867] (sample_interface) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.276000] (sample_interface) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.276242] (sample_interface) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.284764] (sample_interface) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.300707] (-) TimerEvent: {}
+[0.364013] (sample_interface) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.400823] (-) TimerEvent: {}
+[0.415026] (sample_interface) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[0.417890] (sample_interface) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.422776] (sample_interface) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.450449] (sample_interface) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.500913] (-) TimerEvent: {}
+[0.523734] (sample_interface) StderrLine: {'line': b'\x1b[31mCMake Error at /opt/ros/humble/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:59 (message):\n'}
+[0.523837] (sample_interface) StderrLine: {'line': b'  execute_process(/usr/bin/python3 -m rosidl_adapter --package-name\n'}
+[0.523909] (sample_interface) StderrLine: {'line': b'  sample_interface --arguments-file\n'}
+[0.523932] (sample_interface) StderrLine: {'line': b'  /home/alex/git/rc-test-dev/sample/colcon_ws/sample/build/sample_interface/rosidl_adapter__arguments__sample_interface.json\n'}
+[0.523954] (sample_interface) StderrLine: {'line': b'  --output-dir\n'}
+[0.523974] (sample_interface) StderrLine: {'line': b'  /home/alex/git/rc-test-dev/sample/colcon_ws/sample/build/sample_interface/rosidl_adapter/sample_interface\n'}
+[0.523995] (sample_interface) StderrLine: {'line': b'  --output-file\n'}
+[0.524014] (sample_interface) StderrLine: {'line': b'  /home/alex/git/rc-test-dev/sample/colcon_ws/sample/build/sample_interface/rosidl_adapter/sample_interface.idls)\n'}
+[0.524034] (sample_interface) StderrLine: {'line': b'  returned error code 1:\n'}
+[0.524053] (sample_interface) StderrLine: {'line': b'\n'}
+[0.524073] (sample_interface) StderrLine: {'line': b"  KeyError processing template 'struct.idl.em': 'time'\n"}
+[0.524095] (sample_interface) StderrLine: {'line': b'\n'}
+[0.524114] (sample_interface) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.524133] (sample_interface) StderrLine: {'line': b'  /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:130 (rosidl_adapt_interfaces)\n'}
+[0.524153] (sample_interface) StderrLine: {'line': b'  CMakeLists.txt:12 (rosidl_generate_interfaces)\n'}
+[0.524172] (sample_interface) StderrLine: {'line': b'\n'}
+[0.524190] (sample_interface) StderrLine: {'line': b'\x1b[0m\n'}
+[0.524208] (sample_interface) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[0.524233] (sample_interface) StdoutLine: {'line': b'See also "/home/alex/git/rc-test-dev/sample/colcon_ws/sample/build/sample_interface/CMakeFiles/CMakeOutput.log".\n'}
+[0.526998] (sample_interface) CommandEnded: {'returncode': 1}
+[0.540926] (sample_interface) JobEnded: {'identifier': 'sample_interface', 'rc': 1}
+[0.551985] (-) EventReactorShutdown: {}

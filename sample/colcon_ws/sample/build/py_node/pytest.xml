@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="1" skipped="1" tests="3" time="0.129" timestamp="2024-09-06T14:48:22.008886" hostname="alex-QEMU-Virtual-Machine"><testcase classname="py_node.test.test_copyright" name="test_copyright" time="0.000"><skipped type="pytest.skip" message="No copyright header has been placed in the generated source file.">/home/alex/git/rc-test-dev/sample/colcon_ws/sample/src/py_node/test/test_copyright.py:20: No copyright header has been placed in the generated source file.</skipped></testcase><testcase classname="py_node.test.test_flake8" name="test_flake8" time="0.060"><failure message="AssertionError: Found 49 code style errors / warnings:&#10;  ./py_node/node_sample.py:18:1: F401 'time' imported but unused&#10;  ./py_node/node_sample.py:18:1: I100 Import statements are in the wrong order. 'import time' should be before 'import rospy' and in a different group.&#10;  ./py_node/node_sample.py:18:1: I201 Missing newline between import groups. 'import time' is identified as Stdlib and 'import rospy' is identified as Third Party.&#10;  ./py_node/node_sample.py:20:1: F403 'from sample.msg import *' used; unable to detect undefined names&#10;  ./py_node/node_sample.py:21:1: E265 block comment should start with '# '&#10;  ./py_node/node_sample.py:23:1: E302 expected 2 blank lines, found 1&#10;  ./py_node/node_sample.py:24:1: W191 indentation contains tabs&#10;  ./py_node/node_sample.py:26:1: W191 indentation contains tabs&#10;  ./py_node/node_sample.py:26:11: F405 'InputAccepted' may be undefined, or defined from star imports: sample.msg&#10;  ./py_node/node_sample.py:27:1: W191 indentation contains tabs&#10;  ./py_node/node_sample.py:28:1: W191 indentation contains tabs&#10;  ./py_node/node_sample.py:28:16: Q000 Double quotes found but single quotes preferred&#10;  ./py_node/node_sample.py:29:1: W191 indentation contains tabs&#10;  ./py_node/node_sample.py:29:2: F405 'input_accepted_pub' may be undefined, or defined from star imports: sample.msg&#10;  ./py_node/node_sample.py:31:1: W191 indentation contains tabs&#10;  ./py_node/node_sample.py:31:11: F405 'Output' may be undefined, or defined from star imports: sample.msg&#10;  ./py_node/node_sample.py:32:1: W191 indentation contains tabs&#10;  ./py_node/node_sample.py:33:1: W191 indentation contains tabs&#10;  ./py_node/node_sample.py:33:1: W293 blank line contains whitespace&#10;  ./py_node/node_sample.py:34:1: W191 indentation contains tabs&#10;  ./py_node/node_sample.py:35:1: W191 indentation contains tabs&#10;  ./py_node/node_sample.py:36:1: W191 indentation contains tabs&#10;  ./py_node/node_sample.py:37:1: W191 indentation contains tabs&#10;  ./py_node/node_sample.py:38:1: W191 indentation contains tabs&#10;  ./py_node/node_sample.py:38:1: W293 blank line contains whitespace&#10;  ./py_node/node_sample.py:38:2: E101 indentation contains mixed spaces and tabs&#10;  ./py_node/node_sample.py:39:1: E101 indentation contains mixed spaces and tabs&#10;  ./py_node/node_sample.py:40:1: W191 indentation contains tabs&#10;  ./py_node/node_sample.py:40:2: F405 'output_pub' may be undefined, or defined from star imports: sample.msg&#10;  ./py_node/node_sample.py:42:1: E302 expected 2 blank lines, found 1&#10;  ./py_node/node_sample.py:43:1: E101 indentation contains mixed spaces and tabs&#10;  ./py_node/node_sample.py:45:1: E101 indentation contains mixed spaces and tabs&#10;  ./py_node/node_sample.py:46:1: E101 indentation contains mixed spaces and tabs&#10;  ./py_node/node_sample.py:46:72: F405 'InputAccepted' may be undefined, or defined from star imports: sample.msg&#10;  ./py_node/node_sample.py:47:1: E101 indentation contains mixed spaces and tabs&#10;  ./py_node/node_sample.py:47:56: F405 'Output' may be undefined, or defined from star imports: sample.msg&#10;  ./py_node/node_sample.py:49:1: E101 indentation contains mixed spaces and tabs&#10;  ./py_node/node_sample.py:50:1: E101 indentation contains mixed spaces and tabs&#10;  ./py_node/node_sample.py:50:43: F405 'Input' may be undefined, or defined from star imports: sample.msg&#10;  ./py_node/node_sample.py:52:1: E101 indentation contains mixed spaces and tabs&#10;  ./py_node/node_sample.py:53:1: E101 indentation contains mixed spaces and tabs&#10;  ./py_node/node_sample.py:54:1: E101 indentation contains mixed spaces and tabs&#10;  ./py_node/node_sample.py:55:1: E101 indentation contains mixed spaces and tabs&#10;  ./py_node/node_sample.py:57:1: E305 expected 2 blank lines after class or function definition, found 1&#10;  ./py_node/node_sample.py:58:1: E101 indentation contains mixed spaces and tabs&#10;  ./py_node/node_sample.py:59:1: E101 indentation contains mixed spaces and tabs&#10;  ./py_node/node_sample.py:60:1: E101 indentation contains mixed spaces and tabs&#10;  ./py_node/node_sample.py:61:1: E101 indentation contains mixed spaces and tabs&#10;  ./py_node/node_sample.py:62:1: W391 blank line at end of file&#10;assert 1 == 0">test/test_flake8.py:23: in test_flake8
+    assert rc == 0, \
+E   AssertionError: Found 49 code style errors / warnings:
+E     ./py_node/node_sample.py:18:1: F401 'time' imported but unused
+E     ./py_node/node_sample.py:18:1: I100 Import statements are in the wrong order. 'import time' should be before 'import rospy' and in a different group.
+E     ./py_node/node_sample.py:18:1: I201 Missing newline between import groups. 'import time' is identified as Stdlib and 'import rospy' is identified as Third Party.
+E     ./py_node/node_sample.py:20:1: F403 'from sample.msg import *' used; unable to detect undefined names
+E     ./py_node/node_sample.py:21:1: E265 block comment should start with '# '
+E     ./py_node/node_sample.py:23:1: E302 expected 2 blank lines, found 1
+E     ./py_node/node_sample.py:24:1: W191 indentation contains tabs
+E     ./py_node/node_sample.py:26:1: W191 indentation contains tabs
+E     ./py_node/node_sample.py:26:11: F405 'InputAccepted' may be undefined, or defined from star imports: sample.msg
+E     ./py_node/node_sample.py:27:1: W191 indentation contains tabs
+E     ./py_node/node_sample.py:28:1: W191 indentation contains tabs
+E     ./py_node/node_sample.py:28:16: Q000 Double quotes found but single quotes preferred
+E     ./py_node/node_sample.py:29:1: W191 indentation contains tabs
+E     ./py_node/node_sample.py:29:2: F405 'input_accepted_pub' may be undefined, or defined from star imports: sample.msg
+E     ./py_node/node_sample.py:31:1: W191 indentation contains tabs
+E     ./py_node/node_sample.py:31:11: F405 'Output' may be undefined, or defined from star imports: sample.msg
+E     ./py_node/node_sample.py:32:1: W191 indentation contains tabs
+E     ./py_node/node_sample.py:33:1: W191 indentation contains tabs
+E     ./py_node/node_sample.py:33:1: W293 blank line contains whitespace
+E     ./py_node/node_sample.py:34:1: W191 indentation contains tabs
+E     ./py_node/node_sample.py:35:1: W191 indentation contains tabs
+E     ./py_node/node_sample.py:36:1: W191 indentation contains tabs
+E     ./py_node/node_sample.py:37:1: W191 indentation contains tabs
+E     ./py_node/node_sample.py:38:1: W191 indentation contains tabs
+E     ./py_node/node_sample.py:38:1: W293 blank line contains whitespace
+E     ./py_node/node_sample.py:38:2: E101 indentation contains mixed spaces and tabs
+E     ./py_node/node_sample.py:39:1: E101 indentation contains mixed spaces and tabs
+E     ./py_node/node_sample.py:40:1: W191 indentation contains tabs
+E     ./py_node/node_sample.py:40:2: F405 'output_pub' may be undefined, or defined from star imports: sample.msg
+E     ./py_node/node_sample.py:42:1: E302 expected 2 blank lines, found 1
+E     ./py_node/node_sample.py:43:1: E101 indentation contains mixed spaces and tabs
+E     ./py_node/node_sample.py:45:1: E101 indentation contains mixed spaces and tabs
+E     ./py_node/node_sample.py:46:1: E101 indentation contains mixed spaces and tabs
+E     ./py_node/node_sample.py:46:72: F405 'InputAccepted' may be undefined, or defined from star imports: sample.msg
+E     ./py_node/node_sample.py:47:1: E101 indentation contains mixed spaces and tabs
+E     ./py_node/node_sample.py:47:56: F405 'Output' may be undefined, or defined from star imports: sample.msg
+E     ./py_node/node_sample.py:49:1: E101 indentation contains mixed spaces and tabs
+E     ./py_node/node_sample.py:50:1: E101 indentation contains mixed spaces and tabs
+E     ./py_node/node_sample.py:50:43: F405 'Input' may be undefined, or defined from star imports: sample.msg
+E     ./py_node/node_sample.py:52:1: E101 indentation contains mixed spaces and tabs
+E     ./py_node/node_sample.py:53:1: E101 indentation contains mixed spaces and tabs
+E     ./py_node/node_sample.py:54:1: E101 indentation contains mixed spaces and tabs
+E     ./py_node/node_sample.py:55:1: E101 indentation contains mixed spaces and tabs
+E     ./py_node/node_sample.py:57:1: E305 expected 2 blank lines after class or function definition, found 1
+E     ./py_node/node_sample.py:58:1: E101 indentation contains mixed spaces and tabs
+E     ./py_node/node_sample.py:59:1: E101 indentation contains mixed spaces and tabs
+E     ./py_node/node_sample.py:60:1: E101 indentation contains mixed spaces and tabs
+E     ./py_node/node_sample.py:61:1: E101 indentation contains mixed spaces and tabs
+E     ./py_node/node_sample.py:62:1: W391 blank line at end of file
+E   assert 1 == 0</failure></testcase><testcase classname="py_node.test.test_pep257" name="test_pep257" time="0.007" /></testsuite></testsuites>

@@ -1,0 +1,54 @@
+[0.005s] Invoking command in '/home/alex/git/rc-test-dev/sample/colcon_ws/sample/build/sample_interface': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/alex/git/rc-test-dev/sample/colcon_ws/sample/build/sample_interface -- -j5 -l5
+[0.018s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.080s] -- Found std_msgs: 4.2.4 (/opt/ros/humble/share/std_msgs/cmake)
+[0.090s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.091s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.094s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.097s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.102s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.111s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.190s] [31mCMake Error at /opt/ros/humble/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:59 (message):
+[0.190s]   execute_process(/usr/bin/python3 -m rosidl_adapter --package-name
+[0.191s]   sample_interface --arguments-file
+[0.191s]   /home/alex/git/rc-test-dev/sample/colcon_ws/sample/build/sample_interface/rosidl_adapter__arguments__sample_interface.json
+[0.191s]   --output-dir
+[0.191s]   /home/alex/git/rc-test-dev/sample/colcon_ws/sample/build/sample_interface/rosidl_adapter/sample_interface
+[0.191s]   --output-file
+[0.191s]   /home/alex/git/rc-test-dev/sample/colcon_ws/sample/build/sample_interface/rosidl_adapter/sample_interface.idls)
+[0.191s]   returned error code 1:
+[0.191s] 
+[0.191s]   Error processing 'builtin_interfaces/msg/Time stamp' of
+[0.191s]   'sample_interface/InputAccepted': 'builtin_interfaces/msg/Time'
+[0.191s] 
+[0.191s]   Traceback (most recent call last):
+[0.191s] 
+[0.191s]     File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+[0.191s]       return _run_code(code, main_globals, None,
+[0.191s]     File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+[0.191s]       exec(code, run_globals)
+[0.191s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/__main__.py", line 19, in <module>
+[0.191s]       sys.exit(main())
+[0.191s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/main.py", line 53, in main
+[0.191s]       abs_idl_file = convert_to_idl(
+[0.191s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/__init__.py", line 19, in convert_to_idl
+[0.191s]       return convert_msg_to_idl(
+[0.191s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/msg/__init__.py", line 28, in convert_msg_to_idl
+[0.191s]       msg = parse_message_string(package_name, input_file.stem, content)
+[0.191s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/parser.py", line 520, in parse_message_string
+[0.191s]       Type(type_string, context_package_name=pkg_name),
+[0.191s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/parser.py", line 277, in __init__
+[0.191s]       super(Type, self).__init__(
+[0.191s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/parser.py", line 190, in __init__
+[0.191s]       raise InvalidResourceName(type_string)
+[0.191s] 
+[0.191s]   rosidl_adapter.parser.InvalidResourceName: builtin_interfaces/msg/Time
+[0.191s] 
+[0.191s] Call Stack (most recent call first):
+[0.191s]   /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:130 (rosidl_adapt_interfaces)
+[0.191s]   CMakeLists.txt:14 (rosidl_generate_interfaces)
+[0.191s] 
+[0.191s] [0m
+[0.191s] -- Configuring incomplete, errors occurred!
+[0.191s] See also "/home/alex/git/rc-test-dev/sample/colcon_ws/sample/build/sample_interface/CMakeFiles/CMakeOutput.log".
+[0.193s] gmake: *** [Makefile:1179: cmake_check_build_system] Error 1
+[0.194s] Invoked command in '/home/alex/git/rc-test-dev/sample/colcon_ws/sample/build/sample_interface' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/alex/git/rc-test-dev/sample/colcon_ws/sample/build/sample_interface -- -j5 -l5

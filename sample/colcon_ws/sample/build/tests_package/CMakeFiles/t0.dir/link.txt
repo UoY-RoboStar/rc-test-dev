@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/t0.dir/src/t0.cpp.o -o t0 

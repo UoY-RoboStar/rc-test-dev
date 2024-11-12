@@ -1,0 +1,18 @@
+
+--
+-- RoboChart generator version 3.0.0.202401231330
+-- Automatically generated on 03-09-2024 11:34:37
+--
+-- Iterated compression status: true
+-- Assertions compression status: false
+--
+
+-- data definitions used by platform:/resource/ros-test-2/main.rct
+datatype Value = Value_High | Value_Low
+Value_is(Value_High,Value_High) = true
+Value_is(_,Value_High) = false
+Value_is(Value_Low,Value_Low) = true
+Value_is(_,Value_Low) = false
+
+
+	

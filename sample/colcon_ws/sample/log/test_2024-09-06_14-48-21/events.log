@@ -1,0 +1,328 @@
+[0.000000] (-) TimerEvent: {}
+[0.000458] (py_node) JobQueued: {'identifier': 'py_node', 'dependencies': OrderedDict([('py_node', '/home/alex/git/rc-test-dev/sample/colcon_ws/sample/install/py_node')])}
+[0.000487] (py_node) JobStarted: {'identifier': 'py_node'}
+[0.099979] (-) TimerEvent: {}
+[0.108094] (py_node) Command: {'cmd': ['/usr/bin/python3', '-m', 'pytest'], 'cwd': '/home/alex/git/rc-test-dev/sample/colcon_ws/sample/src/py_node', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en_GB:en', 'USER': 'alex', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/alex', 'OLDPWD': '/home/alex/git/rc-test-dev/sample/colcon_ws/sample/src', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '2416', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', '_colcon_cd_root': '/opt/ros/humble/', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/alex/git/rc-test-dev/sample/colcon_ws/sample/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'alex', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'alex', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/alex-QEMU-Virtual-Machine:@/tmp/.ICE-unix/1220,unix/alex-QEMU-Virtual-Machine:/tmp/.ICE-unix/1220', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/c0a6e376_2fb0_43a9_8f35_9fda0c229e06', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.0B1ET2', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.126', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/alex/git/rc-test-dev/sample/colcon_ws/sample/install/py_node:/home/alex/git/rc-test-dev/sample/colcon_ws/sample/install/my_package:/opt/ros/humble', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/alex/git/rc-test-dev/sample/colcon_ws/sample/build/py_node', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/alex/git/rc-test-dev/sample/colcon_ws/sample/install/py_node/lib/python3.10/site-packages:/home/alex/git/rc-test-dev/sample/colcon_ws/sample/install/my_package/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'VTE_VERSION': '6800', 'CMAKE_PREFIX_PATH': '/home/alex/git/rc-test-dev/sample/colcon_ws/sample/install/my_package', 'PYTHONDONTWRITEBYTECODE': '1', 'PYTEST_ADDOPTS': '--tb=short --junit-xml=/home/alex/git/rc-test-dev/sample/colcon_ws/sample/build/py_node/pytest.xml --junit-prefix=py_node -o cache_dir=/home/alex/git/rc-test-dev/sample/colcon_ws/sample/build/py_node/.pytest_cache'}, 'shell': False}
+[0.200849] (-) TimerEvent: {}
+[0.301397] (-) TimerEvent: {}
+[0.352486] (py_node) StdoutLine: {'line': b'\x1b[1m============================= test session starts ==============================\x1b[0m\n'}
+[0.352584] (py_node) StdoutLine: {'line': b'platform linux -- Python 3.10.12, pytest-6.2.5, py-1.10.0, pluggy-0.13.0\n'}
+[0.354256] (py_node) StdoutLine: {'line': b'cachedir: /home/alex/git/rc-test-dev/sample/colcon_ws/sample/build/py_node/.pytest_cache\n'}
+[0.354310] (py_node) StdoutLine: {'line': b'rootdir: /home/alex/git/rc-test-dev/sample/colcon_ws/sample/src/py_node\n'}
+[0.354401] (py_node) StdoutLine: {'line': b'plugins: ament-flake8-0.12.11, ament-pep257-0.12.11, ament-lint-0.12.11, ament-copyright-0.12.11, launch-testing-1.0.6, launch-testing-ros-0.19.7, ament-xmllint-0.12.11, rerunfailures-10.2, repeat-0.9.1, cov-3.0.0, colcon-core-0.17.0\n'}
+[0.396344] (py_node) StdoutLine: {'line': b'\x1b[1mcollecting ... \x1b[0m\x1b[1m\n'}
+[0.396424] (py_node) StdoutLine: {'line': b'collected 3 items                                                              \x1b[0m\n'}
+[0.396494] (py_node) StdoutLine: {'line': b'\n'}
+[0.399227] (py_node) StdoutLine: {'line': b'test/test_copyright.py \x1b[33ms\x1b[0m\x1b[32m                                                 [ 33%]\x1b[0m\n'}
+[0.401489] (-) TimerEvent: {}
+[0.473373] (py_node) StdoutLine: {'line': b'test/test_flake8.py \x1b[31mF\x1b[0m\x1b[31m                                                    [ 66%]\x1b[0m\n'}
+[0.480866] (py_node) StdoutLine: {'line': b'test/test_pep257.py \x1b[32m.\x1b[0m\x1b[31m                                                    [100%]\x1b[0m\n'}
+[0.480987] (py_node) StdoutLine: {'line': b'\n'}
+[0.481028] (py_node) StdoutLine: {'line': b'=================================== FAILURES ===================================\n'}
+[0.481057] (py_node) StdoutLine: {'line': b'\x1b[31m\x1b[1m_________________________________ test_flake8 __________________________________\x1b[0m\n'}
+[0.481124] (py_node) StdoutLine: {'line': b'\x1b[1m\x1b[31mtest/test_flake8.py\x1b[0m:23: in test_flake8\n'}
+[0.501507] (py_node) StdoutLine: {'line': b'    \x1b[94massert\x1b[39;49;00m rc == \x1b[94m0\x1b[39;49;00m, \\\n'}
+[0.501577] (-) TimerEvent: {}
+[0.501655] (py_node) StdoutLine: {'line': b'\x1b[1m\x1b[31mE   AssertionError: Found 49 code style errors / warnings:\x1b[0m\n'}
+[0.501726] (py_node) StdoutLine: {'line': b"\x1b[1m\x1b[31mE     ./py_node/node_sample.py:18:1: F401 'time' imported but unused\x1b[0m\n"}
+[0.501780] (py_node) StdoutLine: {'line': b"\x1b[1m\x1b[31mE     ./py_node/node_sample.py:18:1: I100 Import statements are in the wrong order. 'import time' should be before 'import rospy' and in a different group.\x1b[0m\n"}
+[0.501840] (py_node) StdoutLine: {'line': b"\x1b[1m\x1b[31mE     ./py_node/node_sample.py:18:1: I201 Missing newline between import groups. 'import time' is identified as Stdlib and 'import rospy' is identified as Third Party.\x1b[0m\n"}
+[0.502480] (py_node) StdoutLine: {'line': b"\x1b[1m\x1b[31mE     ./py_node/node_sample.py:20:1: F403 'from sample.msg import *' used; unable to detect undefined names\x1b[0m\n"}
+[0.502503] (py_node) StdoutLine: {'line': b"\x1b[1m\x1b[31mE     ./py_node/node_sample.py:21:1: E265 block comment should start with '# '\x1b[0m\n"}
+[0.502528] (py_node) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./py_node/node_sample.py:23:1: E302 expected 2 blank lines, found 1\x1b[0m\n'}
+[0.502548] (py_node) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./py_node/node_sample.py:24:1: W191 indentation contains tabs\x1b[0m\n'}
+[0.502567] (py_node) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./py_node/node_sample.py:26:1: W191 indentation contains tabs\x1b[0m\n'}
+[0.502586] (py_node) StdoutLine: {'line': b"\x1b[1m\x1b[31mE     ./py_node/node_sample.py:26:11: F405 'InputAccepted' may be undefined, or defined from star imports: sample.msg\x1b[0m\n"}
+[0.502606] (py_node) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./py_node/node_sample.py:27:1: W191 indentation contains tabs\x1b[0m\n'}
+[0.502625] (py_node) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./py_node/node_sample.py:28:1: W191 indentation contains tabs\x1b[0m\n'}
+[0.502644] (py_node) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./py_node/node_sample.py:28:16: Q000 Double quotes found but single quotes preferred\x1b[0m\n'}
+[0.502665] (py_node) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./py_node/node_sample.py:29:1: W191 indentation contains tabs\x1b[0m\n'}
+[0.502684] (py_node) StdoutLine: {'line': b"\x1b[1m\x1b[31mE     ./py_node/node_sample.py:29:2: F405 'input_accepted_pub' may be undefined, or defined from star imports: sample.msg\x1b[0m\n"}
+[0.502704] (py_node) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./py_node/node_sample.py:31:1: W191 indentation contains tabs\x1b[0m\n'}
+[0.502723] (py_node) StdoutLine: {'line': b"\x1b[1m\x1b[31mE     ./py_node/node_sample.py:31:11: F405 'Output' may be undefined, or defined from star imports: sample.msg\x1b[0m\n"}
+[0.502742] (py_node) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./py_node/node_sample.py:32:1: W191 indentation contains tabs\x1b[0m\n'}
+[0.502761] (py_node) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./py_node/node_sample.py:33:1: W191 indentation contains tabs\x1b[0m\n'}
+[0.502782] (py_node) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./py_node/node_sample.py:33:1: W293 blank line contains whitespace\x1b[0m\n'}
+[0.502801] (py_node) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./py_node/node_sample.py:34:1: W191 indentation contains tabs\x1b[0m\n'}
+[0.502820] (py_node) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./py_node/node_sample.py:35:1: W191 indentation contains tabs\x1b[0m\n'}
+[0.502839] (py_node) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./py_node/node_sample.py:36:1: W191 indentation contains tabs\x1b[0m\n'}
+[0.502858] (py_node) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./py_node/node_sample.py:37:1: W191 indentation contains tabs\x1b[0m\n'}
+[0.502877] (py_node) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./py_node/node_sample.py:38:1: W191 indentation contains tabs\x1b[0m\n'}
+[0.502896] (py_node) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./py_node/node_sample.py:38:1: W293 blank line contains whitespace\x1b[0m\n'}
+[0.502915] (py_node) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./py_node/node_sample.py:38:2: E101 indentation contains mixed spaces and tabs\x1b[0m\n'}
+[0.502934] (py_node) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./py_node/node_sample.py:39:1: E101 indentation contains mixed spaces and tabs\x1b[0m\n'}
+[0.502953] (py_node) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./py_node/node_sample.py:40:1: W191 indentation contains tabs\x1b[0m\n'}
+[0.502972] (py_node) StdoutLine: {'line': b"\x1b[1m\x1b[31mE     ./py_node/node_sample.py:40:2: F405 'output_pub' may be undefined, or defined from star imports: sample.msg\x1b[0m\n"}
+[0.502996] (py_node) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./py_node/node_sample.py:42:1: E302 expected 2 blank lines, found 1\x1b[0m\n'}
+[0.503015] (py_node) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./py_node/node_sample.py:43:1: E101 indentation contains mixed spaces and tabs\x1b[0m\n'}
+[0.503034] (py_node) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./py_node/node_sample.py:45:1: E101 indentation contains mixed spaces and tabs\x1b[0m\n'}
+[0.503054] (py_node) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./py_node/node_sample.py:46:1: E101 indentation contains mixed spaces and tabs\x1b[0m\n'}
+[0.503073] (py_node) StdoutLine: {'line': b"\x1b[1m\x1b[31mE     ./py_node/node_sample.py:46:72: F405 'InputAccepted' may be undefined, or defined from star imports: sample.msg\x1b[0m\n"}
+[0.503093] (py_node) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./py_node/node_sample.py:47:1: E101 indentation contains mixed spaces and tabs\x1b[0m\n'}
+[0.503112] (py_node) StdoutLine: {'line': b"\x1b[1m\x1b[31mE     ./py_node/node_sample.py:47:56: F405 'Output' may be undefined, or defined from star imports: sample.msg\x1b[0m\n"}
+[0.503131] (py_node) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./py_node/node_sample.py:49:1: E101 indentation contains mixed spaces and tabs\x1b[0m\n'}
+[0.503149] (py_node) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./py_node/node_sample.py:50:1: E101 indentation contains mixed spaces and tabs\x1b[0m\n'}
+[0.503168] (py_node) StdoutLine: {'line': b"\x1b[1m\x1b[31mE     ./py_node/node_sample.py:50:43: F405 'Input' may be undefined, or defined from star imports: sample.msg\x1b[0m\n"}
+[0.503187] (py_node) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./py_node/node_sample.py:52:1: E101 indentation contains mixed spaces and tabs\x1b[0m\n'}
+[0.503206] (py_node) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./py_node/node_sample.py:53:1: E101 indentation contains mixed spaces and tabs\x1b[0m\n'}
+[0.503224] (py_node) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./py_node/node_sample.py:54:1: E101 indentation contains mixed spaces and tabs\x1b[0m\n'}
+[0.503243] (py_node) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./py_node/node_sample.py:55:1: E101 indentation contains mixed spaces and tabs\x1b[0m\n'}
+[0.503262] (py_node) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./py_node/node_sample.py:57:1: E305 expected 2 blank lines after class or function definition, found 1\x1b[0m\n'}
+[0.503280] (py_node) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./py_node/node_sample.py:58:1: E101 indentation contains mixed spaces and tabs\x1b[0m\n'}
+[0.503299] (py_node) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./py_node/node_sample.py:59:1: E101 indentation contains mixed spaces and tabs\x1b[0m\n'}
+[0.503348] (py_node) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./py_node/node_sample.py:60:1: E101 indentation contains mixed spaces and tabs\x1b[0m\n'}
+[0.503370] (py_node) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./py_node/node_sample.py:61:1: E101 indentation contains mixed spaces and tabs\x1b[0m\n'}
+[0.503389] (py_node) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./py_node/node_sample.py:62:1: W391 blank line at end of file\x1b[0m\n'}
+[0.503408] (py_node) StdoutLine: {'line': b'\x1b[1m\x1b[31mE   assert 1 == 0\x1b[0m\n'}
+[0.503427] (py_node) StdoutLine: {'line': b'----------------------------- Captured stdout call -----------------------------\n'}
+[0.503447] (py_node) StdoutLine: {'line': b'\n'}
+[0.503466] (py_node) StdoutLine: {'line': b"./py_node/node_sample.py:18:1: F401 'time' imported but unused\n"}
+[0.503485] (py_node) StdoutLine: {'line': b'import time\n'}
+[0.503504] (py_node) StdoutLine: {'line': b'^\n'}
+[0.503523] (py_node) StdoutLine: {'line': b'\n'}
+[0.503541] (py_node) StdoutLine: {'line': b"./py_node/node_sample.py:18:1: I100 Import statements are in the wrong order. 'import time' should be before 'import rospy' and in a different group.\n"}
+[0.503561] (py_node) StdoutLine: {'line': b'import time\n'}
+[0.503580] (py_node) StdoutLine: {'line': b'^\n'}
+[0.503599] (py_node) StdoutLine: {'line': b'\n'}
+[0.503617] (py_node) StdoutLine: {'line': b"./py_node/node_sample.py:18:1: I201 Missing newline between import groups. 'import time' is identified as Stdlib and 'import rospy' is identified as Third Party.\n"}
+[0.503636] (py_node) StdoutLine: {'line': b'import time\n'}
+[0.503655] (py_node) StdoutLine: {'line': b'^\n'}
+[0.503674] (py_node) StdoutLine: {'line': b'\n'}
+[0.503692] (py_node) StdoutLine: {'line': b"./py_node/node_sample.py:20:1: F403 'from sample.msg import *' used; unable to detect undefined names\n"}
+[0.503713] (py_node) StdoutLine: {'line': b'from sample.msg import *\n'}
+[0.503733] (py_node) StdoutLine: {'line': b'^\n'}
+[0.503753] (py_node) StdoutLine: {'line': b'\n'}
+[0.503772] (py_node) StdoutLine: {'line': b"./py_node/node_sample.py:21:1: E265 block comment should start with '# '\n"}
+[0.503790] (py_node) StdoutLine: {'line': b'#from rospy_message_converter import message_converter\n'}
+[0.503810] (py_node) StdoutLine: {'line': b'^\n'}
+[0.503829] (py_node) StdoutLine: {'line': b'\n'}
+[0.503847] (py_node) StdoutLine: {'line': b'./py_node/node_sample.py:23:1: E302 expected 2 blank lines, found 1\n'}
+[0.503866] (py_node) StdoutLine: {'line': b'def callback_input(data):\n'}
+[0.503885] (py_node) StdoutLine: {'line': b'^\n'}
+[0.503904] (py_node) StdoutLine: {'line': b'\n'}
+[0.503923] (py_node) StdoutLine: {'line': b'./py_node/node_sample.py:24:1: W191 indentation contains tabs\n'}
+[0.503942] (py_node) StdoutLine: {'line': b'\trospy.loginfo("Called on \'input\' with value: %d", data.value)\n'}
+[0.503961] (py_node) StdoutLine: {'line': b'^\n'}
+[0.503980] (py_node) StdoutLine: {'line': b'\n'}
+[0.503998] (py_node) StdoutLine: {'line': b'./py_node/node_sample.py:26:1: W191 indentation contains tabs\n'}
+[0.504017] (py_node) StdoutLine: {'line': b'\tin_msg = InputAccepted()\n'}
+[0.504036] (py_node) StdoutLine: {'line': b'^\n'}
+[0.504055] (py_node) StdoutLine: {'line': b'\n'}
+[0.504073] (py_node) StdoutLine: {'line': b"./py_node/node_sample.py:26:11: F405 'InputAccepted' may be undefined, or defined from star imports: sample.msg\n"}
+[0.504092] (py_node) StdoutLine: {'line': b'\tin_msg = InputAccepted()\n'}
+[0.504112] (py_node) StdoutLine: {'line': b'\t         ^\n'}
+[0.504131] (py_node) StdoutLine: {'line': b'\n'}
+[0.504149] (py_node) StdoutLine: {'line': b'./py_node/node_sample.py:27:1: W191 indentation contains tabs\n'}
+[0.504168] (py_node) StdoutLine: {'line': b'\tin_msg.stamp = rospy.get_rostime()\n'}
+[0.504187] (py_node) StdoutLine: {'line': b'^\n'}
+[0.504205] (py_node) StdoutLine: {'line': b'\n'}
+[0.504224] (py_node) StdoutLine: {'line': b'./py_node/node_sample.py:28:1: W191 indentation contains tabs\n'}
+[0.504243] (py_node) StdoutLine: {'line': b'\trospy.loginfo("Input accepted")\n'}
+[0.504262] (py_node) StdoutLine: {'line': b'^\n'}
+[0.504281] (py_node) StdoutLine: {'line': b'\n'}
+[0.504300] (py_node) StdoutLine: {'line': b'./py_node/node_sample.py:28:16: Q000 Double quotes found but single quotes preferred\n'}
+[0.504344] (py_node) StdoutLine: {'line': b'\trospy.loginfo("Input accepted")\n'}
+[0.504365] (py_node) StdoutLine: {'line': b'\t              ^\n'}
+[0.504385] (py_node) StdoutLine: {'line': b'\n'}
+[0.504404] (py_node) StdoutLine: {'line': b'./py_node/node_sample.py:29:1: W191 indentation contains tabs\n'}
+[0.504423] (py_node) StdoutLine: {'line': b'\tinput_accepted_pub.publish(in_msg)\n'}
+[0.504442] (py_node) StdoutLine: {'line': b'^\n'}
+[0.504461] (py_node) StdoutLine: {'line': b'\n'}
+[0.504480] (py_node) StdoutLine: {'line': b"./py_node/node_sample.py:29:2: F405 'input_accepted_pub' may be undefined, or defined from star imports: sample.msg\n"}
+[0.504499] (py_node) StdoutLine: {'line': b'\tinput_accepted_pub.publish(in_msg)\n'}
+[0.504518] (py_node) StdoutLine: {'line': b'\t^\n'}
+[0.504536] (py_node) StdoutLine: {'line': b'\n'}
+[0.504555] (py_node) StdoutLine: {'line': b'./py_node/node_sample.py:31:1: W191 indentation contains tabs\n'}
+[0.504574] (py_node) StdoutLine: {'line': b'\toutput = Output()\n'}
+[0.504593] (py_node) StdoutLine: {'line': b'^\n'}
+[0.504611] (py_node) StdoutLine: {'line': b'\n'}
+[0.504630] (py_node) StdoutLine: {'line': b"./py_node/node_sample.py:31:11: F405 'Output' may be undefined, or defined from star imports: sample.msg\n"}
+[0.504652] (py_node) StdoutLine: {'line': b'\toutput = Output()\n'}
+[0.504671] (py_node) StdoutLine: {'line': b'\t         ^\n'}
+[0.504690] (py_node) StdoutLine: {'line': b'\n'}
+[0.504708] (py_node) StdoutLine: {'line': b'./py_node/node_sample.py:32:1: W191 indentation contains tabs\n'}
+[0.504729] (py_node) StdoutLine: {'line': b'\toutput.stamp = rospy.get_rostime()\n'}
+[0.504752] (py_node) StdoutLine: {'line': b'^\n'}
+[0.504773] (py_node) StdoutLine: {'line': b'\n'}
+[0.504792] (py_node) StdoutLine: {'line': b'./py_node/node_sample.py:33:1: W191 indentation contains tabs\n'}
+[0.504811] (py_node) StdoutLine: {'line': b'\t\n'}
+[0.504830] (py_node) StdoutLine: {'line': b'^\n'}
+[0.504849] (py_node) StdoutLine: {'line': b'\n'}
+[0.504868] (py_node) StdoutLine: {'line': b'./py_node/node_sample.py:33:1: W293 blank line contains whitespace\n'}
+[0.504888] (py_node) StdoutLine: {'line': b'\t\n'}
+[0.504906] (py_node) StdoutLine: {'line': b'^\n'}
+[0.504925] (py_node) StdoutLine: {'line': b'\n'}
+[0.504944] (py_node) StdoutLine: {'line': b'./py_node/node_sample.py:34:1: W191 indentation contains tabs\n'}
+[0.504963] (py_node) StdoutLine: {'line': b'\tif (data.value > 5):\n'}
+[0.504982] (py_node) StdoutLine: {'line': b'^\n'}
+[0.505001] (py_node) StdoutLine: {'line': b'\n'}
+[0.505020] (py_node) StdoutLine: {'line': b'./py_node/node_sample.py:35:1: W191 indentation contains tabs\n'}
+[0.505039] (py_node) StdoutLine: {'line': b'\t\toutput.value = 0\n'}
+[0.505057] (py_node) StdoutLine: {'line': b'^\n'}
+[0.505076] (py_node) StdoutLine: {'line': b'\n'}
+[0.505095] (py_node) StdoutLine: {'line': b'./py_node/node_sample.py:36:1: W191 indentation contains tabs\n'}
+[0.505114] (py_node) StdoutLine: {'line': b'\telse:\n'}
+[0.505133] (py_node) StdoutLine: {'line': b'^\n'}
+[0.505151] (py_node) StdoutLine: {'line': b'\n'}
+[0.505170] (py_node) StdoutLine: {'line': b'./py_node/node_sample.py:37:1: W191 indentation contains tabs\n'}
+[0.505189] (py_node) StdoutLine: {'line': b'\t\toutput.value = 1\n'}
+[0.505208] (py_node) StdoutLine: {'line': b'^\n'}
+[0.505226] (py_node) StdoutLine: {'line': b'\n'}
+[0.505244] (py_node) StdoutLine: {'line': b'./py_node/node_sample.py:38:1: W191 indentation contains tabs\n'}
+[0.505263] (py_node) StdoutLine: {'line': b'\t     \n'}
+[0.505281] (py_node) StdoutLine: {'line': b'^\n'}
+[0.505300] (py_node) StdoutLine: {'line': b'\n'}
+[0.505346] (py_node) StdoutLine: {'line': b'./py_node/node_sample.py:38:1: W293 blank line contains whitespace\n'}
+[0.505368] (py_node) StdoutLine: {'line': b'\t     \n'}
+[0.505387] (py_node) StdoutLine: {'line': b'^\n'}
+[0.505405] (py_node) StdoutLine: {'line': b'\n'}
+[0.505424] (py_node) StdoutLine: {'line': b'./py_node/node_sample.py:38:2: E101 indentation contains mixed spaces and tabs\n'}
+[0.505443] (py_node) StdoutLine: {'line': b'\t     \n'}
+[0.505462] (py_node) StdoutLine: {'line': b'\t^\n'}
+[0.505480] (py_node) StdoutLine: {'line': b'\n'}
+[0.505499] (py_node) StdoutLine: {'line': b'./py_node/node_sample.py:39:1: E101 indentation contains mixed spaces and tabs\n'}
+[0.505517] (py_node) StdoutLine: {'line': b'    # Publish output\n'}
+[0.505536] (py_node) StdoutLine: {'line': b'^\n'}
+[0.505555] (py_node) StdoutLine: {'line': b'\n'}
+[0.505573] (py_node) StdoutLine: {'line': b'./py_node/node_sample.py:40:1: W191 indentation contains tabs\n'}
+[0.505592] (py_node) StdoutLine: {'line': b'\toutput_pub.publish(output)\n'}
+[0.505610] (py_node) StdoutLine: {'line': b'^\n'}
+[0.505629] (py_node) StdoutLine: {'line': b'\n'}
+[0.505647] (py_node) StdoutLine: {'line': b"./py_node/node_sample.py:40:2: F405 'output_pub' may be undefined, or defined from star imports: sample.msg\n"}
+[0.505666] (py_node) StdoutLine: {'line': b'\toutput_pub.publish(output)\n'}
+[0.505685] (py_node) StdoutLine: {'line': b'\t^\n'}
+[0.505704] (py_node) StdoutLine: {'line': b'\n'}
+[0.505722] (py_node) StdoutLine: {'line': b'./py_node/node_sample.py:42:1: E302 expected 2 blank lines, found 1\n'}
+[0.505741] (py_node) StdoutLine: {'line': b'def main():\n'}
+[0.505759] (py_node) StdoutLine: {'line': b'^\n'}
+[0.505777] (py_node) StdoutLine: {'line': b'\n'}
+[0.505795] (py_node) StdoutLine: {'line': b'./py_node/node_sample.py:43:1: E101 indentation contains mixed spaces and tabs\n'}
+[0.505814] (py_node) StdoutLine: {'line': b'        global output_pub, input_accepted_pub\n'}
+[0.505833] (py_node) StdoutLine: {'line': b'^\n'}
+[0.505851] (py_node) StdoutLine: {'line': b'\n'}
+[0.505871] (py_node) StdoutLine: {'line': b'./py_node/node_sample.py:45:1: E101 indentation contains mixed spaces and tabs\n'}
+[0.505890] (py_node) StdoutLine: {'line': b'        # Publishers\n'}
+[0.505909] (py_node) StdoutLine: {'line': b'^\n'}
+[0.505927] (py_node) StdoutLine: {'line': b'\n'}
+[0.505945] (py_node) StdoutLine: {'line': b'./py_node/node_sample.py:46:1: E101 indentation contains mixed spaces and tabs\n'}
+[0.505964] (py_node) StdoutLine: {'line': b"        input_accepted_pub = rospy.Publisher('/sample/input_accepted', InputAccepted, queue_size=1)\n"}
+[0.505984] (py_node) StdoutLine: {'line': b'^\n'}
+[0.506002] (py_node) StdoutLine: {'line': b'\n'}
+[0.506020] (py_node) StdoutLine: {'line': b"./py_node/node_sample.py:46:72: F405 'InputAccepted' may be undefined, or defined from star imports: sample.msg\n"}
+[0.506039] (py_node) StdoutLine: {'line': b"        input_accepted_pub = rospy.Publisher('/sample/input_accepted', InputAccepted, queue_size=1)\n"}
+[0.506058] (py_node) StdoutLine: {'line': b'                                                                       ^\n'}
+[0.506076] (py_node) StdoutLine: {'line': b'\n'}
+[0.506095] (py_node) StdoutLine: {'line': b'./py_node/node_sample.py:47:1: E101 indentation contains mixed spaces and tabs\n'}
+[0.506113] (py_node) StdoutLine: {'line': b"        output_pub = rospy.Publisher('/sample/output', Output, queue_size=1)\n"}
+[0.506132] (py_node) StdoutLine: {'line': b'^\n'}
+[0.506151] (py_node) StdoutLine: {'line': b'\n'}
+[0.506169] (py_node) StdoutLine: {'line': b"./py_node/node_sample.py:47:56: F405 'Output' may be undefined, or defined from star imports: sample.msg\n"}
+[0.506188] (py_node) StdoutLine: {'line': b"        output_pub = rospy.Publisher('/sample/output', Output, queue_size=1)\n"}
+[0.506207] (py_node) StdoutLine: {'line': b'                                                       ^\n'}
+[0.506226] (py_node) StdoutLine: {'line': b'\n'}
+[0.506244] (py_node) StdoutLine: {'line': b'./py_node/node_sample.py:49:1: E101 indentation contains mixed spaces and tabs\n'}
+[0.506263] (py_node) StdoutLine: {'line': b'        # Subscribers\n'}
+[0.506281] (py_node) StdoutLine: {'line': b'^\n'}
+[0.506299] (py_node) StdoutLine: {'line': b'\n'}
+[0.506332] (py_node) StdoutLine: {'line': b'./py_node/node_sample.py:50:1: E101 indentation contains mixed spaces and tabs\n'}
+[0.506353] (py_node) StdoutLine: {'line': b"        rospy.Subscriber('/sample/input', Input, callback_input, queue_size=1)\n"}
+[0.506373] (py_node) StdoutLine: {'line': b'^\n'}
+[0.506391] (py_node) StdoutLine: {'line': b'\n'}
+[0.506410] (py_node) StdoutLine: {'line': b"./py_node/node_sample.py:50:43: F405 'Input' may be undefined, or defined from star imports: sample.msg\n"}
+[0.506429] (py_node) StdoutLine: {'line': b"        rospy.Subscriber('/sample/input', Input, callback_input, queue_size=1)\n"}
+[0.506447] (py_node) StdoutLine: {'line': b'                                          ^\n'}
+[0.506466] (py_node) StdoutLine: {'line': b'\n'}
+[0.506485] (py_node) StdoutLine: {'line': b'./py_node/node_sample.py:52:1: E101 indentation contains mixed spaces and tabs\n'}
+[0.506504] (py_node) StdoutLine: {'line': b'        # Initialize node\n'}
+[0.506522] (py_node) StdoutLine: {'line': b'^\n'}
+[0.506541] (py_node) StdoutLine: {'line': b'\n'}
+[0.506559] (py_node) StdoutLine: {'line': b'./py_node/node_sample.py:53:1: E101 indentation contains mixed spaces and tabs\n'}
+[0.506577] (py_node) StdoutLine: {'line': b"        rospy.init_node('sample', anonymous=True)\n"}
+[0.506596] (py_node) StdoutLine: {'line': b'^\n'}
+[0.506614] (py_node) StdoutLine: {'line': b'\n'}
+[0.506632] (py_node) StdoutLine: {'line': b'./py_node/node_sample.py:54:1: E101 indentation contains mixed spaces and tabs\n'}
+[0.506651] (py_node) StdoutLine: {'line': b'        rospy.loginfo("Initialized node \'sample\'")\n'}
+[0.506670] (py_node) StdoutLine: {'line': b'^\n'}
+[0.506688] (py_node) StdoutLine: {'line': b'\n'}
+[0.506707] (py_node) StdoutLine: {'line': b'./py_node/node_sample.py:55:1: E101 indentation contains mixed spaces and tabs\n'}
+[0.506727] (py_node) StdoutLine: {'line': b'        rospy.spin()\n'}
+[0.506746] (py_node) StdoutLine: {'line': b'^\n'}
+[0.506764] (py_node) StdoutLine: {'line': b'\n'}
+[0.506782] (py_node) StdoutLine: {'line': b'./py_node/node_sample.py:57:1: E305 expected 2 blank lines after class or function definition, found 1\n'}
+[0.506801] (py_node) StdoutLine: {'line': b"if __name__ == '__main__':\n"}
+[0.506820] (py_node) StdoutLine: {'line': b'^\n'}
+[0.506838] (py_node) StdoutLine: {'line': b'\n'}
+[0.506857] (py_node) StdoutLine: {'line': b'./py_node/node_sample.py:58:1: E101 indentation contains mixed spaces and tabs\n'}
+[0.506876] (py_node) StdoutLine: {'line': b'        try:\n'}
+[0.506894] (py_node) StdoutLine: {'line': b'^\n'}
+[0.506913] (py_node) StdoutLine: {'line': b'\n'}
+[0.506931] (py_node) StdoutLine: {'line': b'./py_node/node_sample.py:59:1: E101 indentation contains mixed spaces and tabs\n'}
+[0.506950] (py_node) StdoutLine: {'line': b'                main()\n'}
+[0.506969] (py_node) StdoutLine: {'line': b'^\n'}
+[0.506987] (py_node) StdoutLine: {'line': b'\n'}
+[0.507006] (py_node) StdoutLine: {'line': b'./py_node/node_sample.py:60:1: E101 indentation contains mixed spaces and tabs\n'}
+[0.507024] (py_node) StdoutLine: {'line': b'        except rospy.ROSInterruptException:\n'}
+[0.507043] (py_node) StdoutLine: {'line': b'^\n'}
+[0.507061] (py_node) StdoutLine: {'line': b'\n'}
+[0.507080] (py_node) StdoutLine: {'line': b'./py_node/node_sample.py:61:1: E101 indentation contains mixed spaces and tabs\n'}
+[0.507098] (py_node) StdoutLine: {'line': b'                pass\n'}
+[0.507119] (py_node) StdoutLine: {'line': b'^\n'}
+[0.507140] (py_node) StdoutLine: {'line': b'\n'}
+[0.507160] (py_node) StdoutLine: {'line': b'./py_node/node_sample.py:62:1: W391 blank line at end of file\n'}
+[0.507178] (py_node) StdoutLine: {'line': b'\n'}
+[0.507197] (py_node) StdoutLine: {'line': b'^\n'}
+[0.507216] (py_node) StdoutLine: {'line': b'\n'}
+[0.507235] (py_node) StdoutLine: {'line': b'16    E101 indentation contains mixed spaces and tabs\n'}
+[0.507254] (py_node) StdoutLine: {'line': b"1     E265 block comment should start with '# '\n"}
+[0.507277] (py_node) StdoutLine: {'line': b'2     E302 expected 2 blank lines, found 1\n'}
+[0.507296] (py_node) StdoutLine: {'line': b'1     E305 expected 2 blank lines after class or function definition, found 1\n'}
+[0.507352] (py_node) StdoutLine: {'line': b"1     F401 'time' imported but unused\n"}
+[0.507376] (py_node) StdoutLine: {'line': b"1     F403 'from sample.msg import *' used; unable to detect undefined names\n"}
+[0.507395] (py_node) StdoutLine: {'line': b"7     F405 'InputAccepted' may be undefined, or defined from star imports: sample.msg\n"}
+[0.507414] (py_node) StdoutLine: {'line': b"1     I100 Import statements are in the wrong order. 'import time' should be before 'import rospy' and in a different group.\n"}
+[0.507434] (py_node) StdoutLine: {'line': b"1     I201 Missing newline between import groups. 'import time' is identified as Stdlib and 'import rospy' is identified as Third Party.\n"}
+[0.507453] (py_node) StdoutLine: {'line': b'1     Q000 Double quotes found but single quotes preferred\n'}
+[0.507472] (py_node) StdoutLine: {'line': b'14    W191 indentation contains tabs\n'}
+[0.507490] (py_node) StdoutLine: {'line': b'2     W293 blank line contains whitespace\n'}
+[0.507509] (py_node) StdoutLine: {'line': b'1     W391 blank line at end of file\n'}
+[0.507528] (py_node) StdoutLine: {'line': b'\n'}
+[0.507546] (py_node) StdoutLine: {'line': b'6 files checked\n'}
+[0.507565] (py_node) StdoutLine: {'line': b'49 errors\n'}
+[0.507583] (py_node) StdoutLine: {'line': b'\n'}
+[0.507601] (py_node) StdoutLine: {'line': b"'E'-type errors: 20\n"}
+[0.507620] (py_node) StdoutLine: {'line': b"'F'-type errors: 9\n"}
+[0.507639] (py_node) StdoutLine: {'line': b"'I'-type errors: 2\n"}
+[0.507657] (py_node) StdoutLine: {'line': b"'Q'-type errors: 1\n"}
+[0.507675] (py_node) StdoutLine: {'line': b"'W'-type errors: 17\n"}
+[0.507693] (py_node) StdoutLine: {'line': b'\n'}
+[0.507714] (py_node) StdoutLine: {'line': b'Checked files:\n'}
+[0.507734] (py_node) StdoutLine: {'line': b'\n'}
+[0.507752] (py_node) StdoutLine: {'line': b'* ./setup.py\n'}
+[0.507771] (py_node) StdoutLine: {'line': b'* ./test/test_pep257.py\n'}
+[0.507789] (py_node) StdoutLine: {'line': b'* ./test/test_copyright.py\n'}
+[0.507808] (py_node) StdoutLine: {'line': b'* ./test/test_flake8.py\n'}
+[0.507825] (py_node) StdoutLine: {'line': b'* ./py_node/node_sample.py\n'}
+[0.507841] (py_node) StdoutLine: {'line': b'* ./py_node/__init__.py\n'}
+[0.507858] (py_node) StdoutLine: {'line': b'----------------------------- Captured stderr call -----------------------------\n'}
+[0.507875] (py_node) StdoutLine: {'line': b'option --max-complexity: please update from optparse string `type=` to argparse callable `type=` -- this will be an error in the future\n'}
+[0.507893] (py_node) StdoutLine: {'line': b'option --application-import-names: please update from optparse string `type=` to argparse callable `type=` -- this will be an error in the future\n'}
+[0.507910] (py_node) StdoutLine: {'line': b'option --application-package-names: please update from optparse string `type=` to argparse callable `type=` -- this will be an error in the future\n'}
+[0.507927] (py_node) StdoutLine: {'line': b'option --import-order-style: please update from optparse string `type=` to argparse callable `type=` -- this will be an error in the future\n'}
+[0.507945] (py_node) StdoutLine: {'line': b'option --quotes: please update from optparse string `type=` to argparse callable `type=` -- this will be an error in the future\n'}
+[0.507962] (py_node) StdoutLine: {'line': b'option --inline-quotes: please update from optparse string `type=` to argparse callable `type=` -- this will be an error in the future\n'}
+[0.507979] (py_node) StdoutLine: {'line': b'option --multiline-quotes: please update from optparse string `type=` to argparse callable `type=` -- this will be an error in the future\n'}
+[0.507996] (py_node) StdoutLine: {'line': b'option --docstring-quotes: please update from optparse string `type=` to argparse callable `type=` -- this will be an error in the future\n'}
+[0.508014] (py_node) StdoutLine: {'line': b'- generated xml file: /home/alex/git/rc-test-dev/sample/colcon_ws/sample/build/py_node/pytest.xml -\n'}
+[0.508033] (py_node) StdoutLine: {'line': b'=========================== short test summary info ============================\n'}
+[0.508054] (py_node) StdoutLine: {'line': b'FAILED test/test_flake8.py::test_flake8 - AssertionError: Found 49 code style...\n'}
+[0.508073] (py_node) StdoutLine: {'line': b'\x1b[31m============== \x1b[31m\x1b[1m1 failed\x1b[0m, \x1b[32m1 passed\x1b[0m, \x1b[33m1 skipped\x1b[0m, \x1b[33m2 warnings\x1b[0m\x1b[31m in 0.15s\x1b[0m\x1b[31m ==============\x1b[0m\n'}
+[0.508094] (py_node) StderrLine: {'line': b'\x1b[33m=============================== warnings summary ===============================\x1b[0m\n'}
+[0.508129] (py_node) StderrLine: {'line': b'test/test_flake8.py::test_flake8\n'}
+[0.508148] (py_node) StderrLine: {'line': b'test/test_flake8.py::test_flake8\n'}
+[0.508167] (py_node) StderrLine: {'line': b'  Warning: SelectableGroups dict interface is deprecated. Use select.\n'}
+[0.508185] (py_node) StderrLine: {'line': b'\n'}
+[0.508203] (py_node) StderrLine: {'line': b'-- Docs: https://docs.pytest.org/en/stable/warnings.html\n'}
+[0.538926] (py_node) CommandEnded: {'returncode': 1}
+[0.539196] (py_node) TestFailure: {'identifier': 'py_node'}
+[0.539230] (py_node) JobEnded: {'identifier': 'py_node', 'rc': 0}
+[0.539710] (-) EventReactorShutdown: {}

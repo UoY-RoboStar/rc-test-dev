@@ -1,0 +1,12 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from sample_interface/msg/Input.msg
+// generated code does not contain a copyright notice
+
+
+module sample_interface {
+  module msg {
+    struct Input {
+      uint32 value;
+    };
+  };
+};

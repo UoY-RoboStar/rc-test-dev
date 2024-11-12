@@ -1,0 +1,10 @@
+setup.py
+sample_interface/__init__.py
+sample_interface.egg-info/PKG-INFO
+sample_interface.egg-info/SOURCES.txt
+sample_interface.egg-info/dependency_links.txt
+sample_interface.egg-info/top_level.txt
+sample_interface/msg/__init__.py
+sample_interface/msg/_input.py
+sample_interface/msg/_input_accepted.py
+sample_interface/msg/_output.py

@@ -1,0 +1,6 @@
+msg/Input.idl
+msg/Input.msg
+msg/InputAccepted.idl
+msg/InputAccepted.msg
+msg/Output.idl
+msg/Output.msg
