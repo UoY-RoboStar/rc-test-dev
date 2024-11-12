@@ -1,0 +1,8 @@
+{
+  "package_name": "tutorial_interfaces",
+  "non_idl_tuples": [
+    "/home/alex/git/rc-test-dev/sample/colcon_ws/sample/src/tutorial_interfaces:msg/Num.msg",
+    "/home/alex/git/rc-test-dev/sample/colcon_ws/sample/src/tutorial_interfaces:msg/Sphere.msg",
+    "/home/alex/git/rc-test-dev/sample/colcon_ws/sample/src/tutorial_interfaces:srv/AddThreeInts.srv"
+  ]
+}

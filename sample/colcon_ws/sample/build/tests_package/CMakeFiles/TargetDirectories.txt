@@ -1,0 +1,10 @@
+/home/alex/git/rc-test-dev/sample/colcon_ws/sample/build/tests_package/CMakeFiles/uninstall.dir
+/home/alex/git/rc-test-dev/sample/colcon_ws/sample/build/tests_package/CMakeFiles/tests_package_uninstall.dir
+/home/alex/git/rc-test-dev/sample/colcon_ws/sample/build/tests_package/CMakeFiles/t0.dir
+/home/alex/git/rc-test-dev/sample/colcon_ws/sample/build/tests_package/CMakeFiles/test.dir
+/home/alex/git/rc-test-dev/sample/colcon_ws/sample/build/tests_package/CMakeFiles/edit_cache.dir
+/home/alex/git/rc-test-dev/sample/colcon_ws/sample/build/tests_package/CMakeFiles/rebuild_cache.dir
+/home/alex/git/rc-test-dev/sample/colcon_ws/sample/build/tests_package/CMakeFiles/list_install_components.dir
+/home/alex/git/rc-test-dev/sample/colcon_ws/sample/build/tests_package/CMakeFiles/install.dir
+/home/alex/git/rc-test-dev/sample/colcon_ws/sample/build/tests_package/CMakeFiles/install/local.dir
+/home/alex/git/rc-test-dev/sample/colcon_ws/sample/build/tests_package/CMakeFiles/install/strip.dir

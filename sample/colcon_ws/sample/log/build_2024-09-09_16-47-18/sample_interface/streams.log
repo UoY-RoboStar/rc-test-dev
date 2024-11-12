@@ -1,0 +1,39 @@
+[0.007s] Invoking command in '/home/alex/git/rc-test-dev/sample/colcon_ws/sample/build/sample_interface': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/alex/git/rc-test-dev/sample/colcon_ws/sample/src/sample_interface -DCMAKE_INSTALL_PREFIX=/home/alex/git/rc-test-dev/sample/colcon_ws/sample/install/sample_interface
+[0.099s] -- The C compiler identification is GNU 11.4.0
+[0.168s] -- The CXX compiler identification is GNU 11.4.0
+[0.175s] -- Detecting C compiler ABI info
+[0.217s] -- Detecting C compiler ABI info - done
+[0.222s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.222s] -- Detecting C compile features
+[0.223s] -- Detecting C compile features - done
+[0.226s] -- Detecting CXX compiler ABI info
+[0.271s] -- Detecting CXX compiler ABI info - done
+[0.276s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.276s] -- Detecting CXX compile features
+[0.276s] -- Detecting CXX compile features - done
+[0.284s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.364s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.415s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.417s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.422s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.450s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.523s] [31mCMake Error at /opt/ros/humble/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:59 (message):
+[0.523s]   execute_process(/usr/bin/python3 -m rosidl_adapter --package-name
+[0.523s]   sample_interface --arguments-file
+[0.523s]   /home/alex/git/rc-test-dev/sample/colcon_ws/sample/build/sample_interface/rosidl_adapter__arguments__sample_interface.json
+[0.523s]   --output-dir
+[0.524s]   /home/alex/git/rc-test-dev/sample/colcon_ws/sample/build/sample_interface/rosidl_adapter/sample_interface
+[0.524s]   --output-file
+[0.524s]   /home/alex/git/rc-test-dev/sample/colcon_ws/sample/build/sample_interface/rosidl_adapter/sample_interface.idls)
+[0.524s]   returned error code 1:
+[0.524s] 
+[0.524s]   KeyError processing template 'struct.idl.em': 'time'
+[0.524s] 
+[0.524s] Call Stack (most recent call first):
+[0.524s]   /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:130 (rosidl_adapt_interfaces)
+[0.524s]   CMakeLists.txt:12 (rosidl_generate_interfaces)
+[0.524s] 
+[0.524s] [0m
+[0.524s] -- Configuring incomplete, errors occurred!
+[0.524s] See also "/home/alex/git/rc-test-dev/sample/colcon_ws/sample/build/sample_interface/CMakeFiles/CMakeOutput.log".
+[0.527s] Invoked command in '/home/alex/git/rc-test-dev/sample/colcon_ws/sample/build/sample_interface' returned '1': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/alex/git/rc-test-dev/sample/colcon_ws/sample/src/sample_interface -DCMAKE_INSTALL_PREFIX=/home/alex/git/rc-test-dev/sample/colcon_ws/sample/install/sample_interface

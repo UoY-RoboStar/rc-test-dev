@@ -12,4 +12,4 @@ test mapping mm {
 }
 for mm generate suite mm_suite of tests {
 	stm0_tracesmod::t0 through stm0_tracesmod::t19
-}
+} 

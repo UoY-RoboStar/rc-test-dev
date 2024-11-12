@@ -1,0 +1,51 @@
+[0.006s] Invoking command in '/home/alex/git/rc-test-dev/sample/colcon_ws/sample/build/tests_package': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/alex/git/rc-test-dev/sample/colcon_ws/sample/install/py_node:/opt/ros/humble /usr/bin/cmake /home/alex/git/rc-test-dev/sample/colcon_ws/sample/src/tests_package -DCMAKE_INSTALL_PREFIX=/home/alex/git/rc-test-dev/sample/colcon_ws/sample/install/tests_package
+[0.038s] -- The C compiler identification is GNU 11.4.0
+[0.073s] -- The CXX compiler identification is GNU 11.4.0
+[0.077s] -- Detecting C compiler ABI info
+[0.110s] -- Detecting C compiler ABI info - done
+[0.114s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.114s] -- Detecting C compile features
+[0.115s] -- Detecting C compile features - done
+[0.116s] -- Detecting CXX compiler ABI info
+[0.159s] -- Detecting CXX compiler ABI info - done
+[0.163s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.163s] -- Detecting CXX compile features
+[0.164s] -- Detecting CXX compile features - done
+[0.165s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.239s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.275s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.307s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.307s] -- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/alex/git/rc-test-dev/sample/colcon_ws/sample/src/tests_package/include>
+[0.307s] -- Configured cppcheck exclude dirs and/or files: 
+[0.307s] -- Added test 'lint_cmake' to check CMake code style
+[0.307s] -- Added test 'uncrustify' to check C / C++ code style
+[0.307s] -- Configured uncrustify additional arguments: 
+[0.308s] -- Added test 'xmllint' to check XML markup files
+[0.308s] -- Configuring done
+[0.310s] -- Generating done
+[0.311s] -- Build files have been written to: /home/alex/git/rc-test-dev/sample/colcon_ws/sample/build/tests_package
+[0.314s] Invoked command in '/home/alex/git/rc-test-dev/sample/colcon_ws/sample/build/tests_package' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/alex/git/rc-test-dev/sample/colcon_ws/sample/install/py_node:/opt/ros/humble /usr/bin/cmake /home/alex/git/rc-test-dev/sample/colcon_ws/sample/src/tests_package -DCMAKE_INSTALL_PREFIX=/home/alex/git/rc-test-dev/sample/colcon_ws/sample/install/tests_package
+[0.314s] Invoking command in '/home/alex/git/rc-test-dev/sample/colcon_ws/sample/build/tests_package': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/alex/git/rc-test-dev/sample/colcon_ws/sample/install/py_node:/opt/ros/humble /usr/bin/cmake --build /home/alex/git/rc-test-dev/sample/colcon_ws/sample/build/tests_package -- -j5 -l5
+[0.339s] [ 50%] [32mBuilding CXX object CMakeFiles/t0.dir/src/t0.cpp.o[0m
+[0.356s] [100%] [32m[1mLinking CXX executable t0[0m
+[0.379s] [100%] Built target t0
+[0.385s] Invoked command in '/home/alex/git/rc-test-dev/sample/colcon_ws/sample/build/tests_package' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/alex/git/rc-test-dev/sample/colcon_ws/sample/install/py_node:/opt/ros/humble /usr/bin/cmake --build /home/alex/git/rc-test-dev/sample/colcon_ws/sample/build/tests_package -- -j5 -l5
+[0.401s] Invoking command in '/home/alex/git/rc-test-dev/sample/colcon_ws/sample/build/tests_package': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/alex/git/rc-test-dev/sample/colcon_ws/sample/install/py_node:/opt/ros/humble /usr/bin/cmake --install /home/alex/git/rc-test-dev/sample/colcon_ws/sample/build/tests_package
+[0.404s] -- Install configuration: ""
+[0.405s] -- Installing: /home/alex/git/rc-test-dev/sample/colcon_ws/sample/install/tests_package/lib/tests_package/t0
+[0.405s] -- Installing: /home/alex/git/rc-test-dev/sample/colcon_ws/sample/install/tests_package/share/ament_index/resource_index/package_run_dependencies/tests_package
+[0.405s] -- Installing: /home/alex/git/rc-test-dev/sample/colcon_ws/sample/install/tests_package/share/ament_index/resource_index/parent_prefix_path/tests_package
+[0.405s] -- Installing: /home/alex/git/rc-test-dev/sample/colcon_ws/sample/install/tests_package/share/tests_package/environment/ament_prefix_path.sh
+[0.405s] -- Installing: /home/alex/git/rc-test-dev/sample/colcon_ws/sample/install/tests_package/share/tests_package/environment/ament_prefix_path.dsv
+[0.405s] -- Installing: /home/alex/git/rc-test-dev/sample/colcon_ws/sample/install/tests_package/share/tests_package/environment/path.sh
+[0.406s] -- Installing: /home/alex/git/rc-test-dev/sample/colcon_ws/sample/install/tests_package/share/tests_package/environment/path.dsv
+[0.406s] -- Installing: /home/alex/git/rc-test-dev/sample/colcon_ws/sample/install/tests_package/share/tests_package/local_setup.bash
+[0.406s] -- Installing: /home/alex/git/rc-test-dev/sample/colcon_ws/sample/install/tests_package/share/tests_package/local_setup.sh
+[0.406s] -- Installing: /home/alex/git/rc-test-dev/sample/colcon_ws/sample/install/tests_package/share/tests_package/local_setup.zsh
+[0.406s] -- Installing: /home/alex/git/rc-test-dev/sample/colcon_ws/sample/install/tests_package/share/tests_package/local_setup.dsv
+[0.406s] -- Installing: /home/alex/git/rc-test-dev/sample/colcon_ws/sample/install/tests_package/share/tests_package/package.dsv
+[0.406s] -- Installing: /home/alex/git/rc-test-dev/sample/colcon_ws/sample/install/tests_package/share/ament_index/resource_index/packages/tests_package
+[0.406s] -- Installing: /home/alex/git/rc-test-dev/sample/colcon_ws/sample/install/tests_package/share/tests_package/cmake/tests_packageConfig.cmake
+[0.406s] -- Installing: /home/alex/git/rc-test-dev/sample/colcon_ws/sample/install/tests_package/share/tests_package/cmake/tests_packageConfig-version.cmake
+[0.406s] -- Installing: /home/alex/git/rc-test-dev/sample/colcon_ws/sample/install/tests_package/share/tests_package/package.xml
+[0.407s] Invoked command in '/home/alex/git/rc-test-dev/sample/colcon_ws/sample/build/tests_package' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/alex/git/rc-test-dev/sample/colcon_ws/sample/install/py_node:/opt/ros/humble /usr/bin/cmake --install /home/alex/git/rc-test-dev/sample/colcon_ws/sample/build/tests_package

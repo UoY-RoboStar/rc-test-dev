@@ -1,0 +1,8 @@
+{
+  "package_name": "sample_interface",
+  "non_idl_tuples": [
+    "/home/alex/git/rc-test-dev/sample/colcon_ws/sample/src/sample_interface:msg/Input.msg",
+    "/home/alex/git/rc-test-dev/sample/colcon_ws/sample/src/sample_interface:msg/InputAccepted.msg",
+    "/home/alex/git/rc-test-dev/sample/colcon_ws/sample/src/sample_interface:msg/Output.msg"
+  ]
+}

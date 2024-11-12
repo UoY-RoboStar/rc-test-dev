@@ -1,0 +1,3 @@
+[console_scripts]
+node_sample = py_node.node_sample:main
+

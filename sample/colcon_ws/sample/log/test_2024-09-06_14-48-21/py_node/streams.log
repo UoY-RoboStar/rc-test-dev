@@ -1,0 +1,317 @@
+[0.108s] Invoking command in '/home/alex/git/rc-test-dev/sample/colcon_ws/sample/src/py_node': AMENT_PREFIX_PATH=/home/alex/git/rc-test-dev/sample/colcon_ws/sample/install/py_node:${AMENT_PREFIX_PATH} PYTEST_ADDOPTS=--tb=short --junit-xml=/home/alex/git/rc-test-dev/sample/colcon_ws/sample/build/py_node/pytest.xml --junit-prefix=py_node -o cache_dir=/home/alex/git/rc-test-dev/sample/colcon_ws/sample/build/py_node/.pytest_cache PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=/home/alex/git/rc-test-dev/sample/colcon_ws/sample/install/py_node/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -m pytest
+[0.352s] [1m============================= test session starts ==============================[0m
+[0.352s] platform linux -- Python 3.10.12, pytest-6.2.5, py-1.10.0, pluggy-0.13.0
+[0.354s] cachedir: /home/alex/git/rc-test-dev/sample/colcon_ws/sample/build/py_node/.pytest_cache
+[0.354s] rootdir: /home/alex/git/rc-test-dev/sample/colcon_ws/sample/src/py_node
+[0.354s] plugins: ament-flake8-0.12.11, ament-pep257-0.12.11, ament-lint-0.12.11, ament-copyright-0.12.11, launch-testing-1.0.6, launch-testing-ros-0.19.7, ament-xmllint-0.12.11, rerunfailures-10.2, repeat-0.9.1, cov-3.0.0, colcon-core-0.17.0
+[0.396s] [1mcollecting ... [0m[1m
+[0.396s] collected 3 items                                                              [0m
+[0.396s] 
+[0.399s] test/test_copyright.py [33ms[0m[32m                                                 [ 33%][0m
+[0.473s] test/test_flake8.py [31mF[0m[31m                                                    [ 66%][0m
+[0.480s] test/test_pep257.py [32m.[0m[31m                                                    [100%][0m
+[0.481s] 
+[0.481s] =================================== FAILURES ===================================
+[0.481s] [31m[1m_________________________________ test_flake8 __________________________________[0m
+[0.481s] [1m[31mtest/test_flake8.py[0m:23: in test_flake8
+[0.501s]     [94massert[39;49;00m rc == [94m0[39;49;00m, \
+[0.501s] [1m[31mE   AssertionError: Found 49 code style errors / warnings:[0m
+[0.501s] [1m[31mE     ./py_node/node_sample.py:18:1: F401 'time' imported but unused[0m
+[0.501s] [1m[31mE     ./py_node/node_sample.py:18:1: I100 Import statements are in the wrong order. 'import time' should be before 'import rospy' and in a different group.[0m
+[0.502s] [1m[31mE     ./py_node/node_sample.py:18:1: I201 Missing newline between import groups. 'import time' is identified as Stdlib and 'import rospy' is identified as Third Party.[0m
+[0.502s] [1m[31mE     ./py_node/node_sample.py:20:1: F403 'from sample.msg import *' used; unable to detect undefined names[0m
+[0.502s] [1m[31mE     ./py_node/node_sample.py:21:1: E265 block comment should start with '# '[0m
+[0.502s] [1m[31mE     ./py_node/node_sample.py:23:1: E302 expected 2 blank lines, found 1[0m
+[0.502s] [1m[31mE     ./py_node/node_sample.py:24:1: W191 indentation contains tabs[0m
+[0.502s] [1m[31mE     ./py_node/node_sample.py:26:1: W191 indentation contains tabs[0m
+[0.502s] [1m[31mE     ./py_node/node_sample.py:26:11: F405 'InputAccepted' may be undefined, or defined from star imports: sample.msg[0m
+[0.502s] [1m[31mE     ./py_node/node_sample.py:27:1: W191 indentation contains tabs[0m
+[0.502s] [1m[31mE     ./py_node/node_sample.py:28:1: W191 indentation contains tabs[0m
+[0.502s] [1m[31mE     ./py_node/node_sample.py:28:16: Q000 Double quotes found but single quotes preferred[0m
+[0.502s] [1m[31mE     ./py_node/node_sample.py:29:1: W191 indentation contains tabs[0m
+[0.502s] [1m[31mE     ./py_node/node_sample.py:29:2: F405 'input_accepted_pub' may be undefined, or defined from star imports: sample.msg[0m
+[0.502s] [1m[31mE     ./py_node/node_sample.py:31:1: W191 indentation contains tabs[0m
+[0.502s] [1m[31mE     ./py_node/node_sample.py:31:11: F405 'Output' may be undefined, or defined from star imports: sample.msg[0m
+[0.502s] [1m[31mE     ./py_node/node_sample.py:32:1: W191 indentation contains tabs[0m
+[0.502s] [1m[31mE     ./py_node/node_sample.py:33:1: W191 indentation contains tabs[0m
+[0.502s] [1m[31mE     ./py_node/node_sample.py:33:1: W293 blank line contains whitespace[0m
+[0.502s] [1m[31mE     ./py_node/node_sample.py:34:1: W191 indentation contains tabs[0m
+[0.502s] [1m[31mE     ./py_node/node_sample.py:35:1: W191 indentation contains tabs[0m
+[0.502s] [1m[31mE     ./py_node/node_sample.py:36:1: W191 indentation contains tabs[0m
+[0.502s] [1m[31mE     ./py_node/node_sample.py:37:1: W191 indentation contains tabs[0m
+[0.502s] [1m[31mE     ./py_node/node_sample.py:38:1: W191 indentation contains tabs[0m
+[0.502s] [1m[31mE     ./py_node/node_sample.py:38:1: W293 blank line contains whitespace[0m
+[0.502s] [1m[31mE     ./py_node/node_sample.py:38:2: E101 indentation contains mixed spaces and tabs[0m
+[0.502s] [1m[31mE     ./py_node/node_sample.py:39:1: E101 indentation contains mixed spaces and tabs[0m
+[0.502s] [1m[31mE     ./py_node/node_sample.py:40:1: W191 indentation contains tabs[0m
+[0.502s] [1m[31mE     ./py_node/node_sample.py:40:2: F405 'output_pub' may be undefined, or defined from star imports: sample.msg[0m
+[0.503s] [1m[31mE     ./py_node/node_sample.py:42:1: E302 expected 2 blank lines, found 1[0m
+[0.503s] [1m[31mE     ./py_node/node_sample.py:43:1: E101 indentation contains mixed spaces and tabs[0m
+[0.503s] [1m[31mE     ./py_node/node_sample.py:45:1: E101 indentation contains mixed spaces and tabs[0m
+[0.503s] [1m[31mE     ./py_node/node_sample.py:46:1: E101 indentation contains mixed spaces and tabs[0m
+[0.503s] [1m[31mE     ./py_node/node_sample.py:46:72: F405 'InputAccepted' may be undefined, or defined from star imports: sample.msg[0m
+[0.503s] [1m[31mE     ./py_node/node_sample.py:47:1: E101 indentation contains mixed spaces and tabs[0m
+[0.503s] [1m[31mE     ./py_node/node_sample.py:47:56: F405 'Output' may be undefined, or defined from star imports: sample.msg[0m
+[0.503s] [1m[31mE     ./py_node/node_sample.py:49:1: E101 indentation contains mixed spaces and tabs[0m
+[0.503s] [1m[31mE     ./py_node/node_sample.py:50:1: E101 indentation contains mixed spaces and tabs[0m
+[0.503s] [1m[31mE     ./py_node/node_sample.py:50:43: F405 'Input' may be undefined, or defined from star imports: sample.msg[0m
+[0.503s] [1m[31mE     ./py_node/node_sample.py:52:1: E101 indentation contains mixed spaces and tabs[0m
+[0.503s] [1m[31mE     ./py_node/node_sample.py:53:1: E101 indentation contains mixed spaces and tabs[0m
+[0.503s] [1m[31mE     ./py_node/node_sample.py:54:1: E101 indentation contains mixed spaces and tabs[0m
+[0.503s] [1m[31mE     ./py_node/node_sample.py:55:1: E101 indentation contains mixed spaces and tabs[0m
+[0.503s] [1m[31mE     ./py_node/node_sample.py:57:1: E305 expected 2 blank lines after class or function definition, found 1[0m
+[0.503s] [1m[31mE     ./py_node/node_sample.py:58:1: E101 indentation contains mixed spaces and tabs[0m
+[0.503s] [1m[31mE     ./py_node/node_sample.py:59:1: E101 indentation contains mixed spaces and tabs[0m
+[0.503s] [1m[31mE     ./py_node/node_sample.py:60:1: E101 indentation contains mixed spaces and tabs[0m
+[0.503s] [1m[31mE     ./py_node/node_sample.py:61:1: E101 indentation contains mixed spaces and tabs[0m
+[0.503s] [1m[31mE     ./py_node/node_sample.py:62:1: W391 blank line at end of file[0m
+[0.503s] [1m[31mE   assert 1 == 0[0m
+[0.503s] ----------------------------- Captured stdout call -----------------------------
+[0.503s] 
+[0.503s] ./py_node/node_sample.py:18:1: F401 'time' imported but unused
+[0.503s] import time
+[0.503s] ^
+[0.503s] 
+[0.503s] ./py_node/node_sample.py:18:1: I100 Import statements are in the wrong order. 'import time' should be before 'import rospy' and in a different group.
+[0.503s] import time
+[0.503s] ^
+[0.503s] 
+[0.503s] ./py_node/node_sample.py:18:1: I201 Missing newline between import groups. 'import time' is identified as Stdlib and 'import rospy' is identified as Third Party.
+[0.503s] import time
+[0.503s] ^
+[0.503s] 
+[0.503s] ./py_node/node_sample.py:20:1: F403 'from sample.msg import *' used; unable to detect undefined names
+[0.503s] from sample.msg import *
+[0.503s] ^
+[0.503s] 
+[0.503s] ./py_node/node_sample.py:21:1: E265 block comment should start with '# '
+[0.503s] #from rospy_message_converter import message_converter
+[0.503s] ^
+[0.503s] 
+[0.503s] ./py_node/node_sample.py:23:1: E302 expected 2 blank lines, found 1
+[0.503s] def callback_input(data):
+[0.503s] ^
+[0.503s] 
+[0.503s] ./py_node/node_sample.py:24:1: W191 indentation contains tabs
+[0.503s] 	rospy.loginfo("Called on 'input' with value: %d", data.value)
+[0.503s] ^
+[0.503s] 
+[0.504s] ./py_node/node_sample.py:26:1: W191 indentation contains tabs
+[0.504s] 	in_msg = InputAccepted()
+[0.504s] ^
+[0.504s] 
+[0.504s] ./py_node/node_sample.py:26:11: F405 'InputAccepted' may be undefined, or defined from star imports: sample.msg
+[0.504s] 	in_msg = InputAccepted()
+[0.504s] 	         ^
+[0.504s] 
+[0.504s] ./py_node/node_sample.py:27:1: W191 indentation contains tabs
+[0.504s] 	in_msg.stamp = rospy.get_rostime()
+[0.504s] ^
+[0.504s] 
+[0.504s] ./py_node/node_sample.py:28:1: W191 indentation contains tabs
+[0.504s] 	rospy.loginfo("Input accepted")
+[0.504s] ^
+[0.504s] 
+[0.504s] ./py_node/node_sample.py:28:16: Q000 Double quotes found but single quotes preferred
+[0.504s] 	rospy.loginfo("Input accepted")
+[0.504s] 	              ^
+[0.504s] 
+[0.504s] ./py_node/node_sample.py:29:1: W191 indentation contains tabs
+[0.504s] 	input_accepted_pub.publish(in_msg)
+[0.504s] ^
+[0.504s] 
+[0.504s] ./py_node/node_sample.py:29:2: F405 'input_accepted_pub' may be undefined, or defined from star imports: sample.msg
+[0.504s] 	input_accepted_pub.publish(in_msg)
+[0.504s] 	^
+[0.504s] 
+[0.504s] ./py_node/node_sample.py:31:1: W191 indentation contains tabs
+[0.504s] 	output = Output()
+[0.504s] ^
+[0.504s] 
+[0.504s] ./py_node/node_sample.py:31:11: F405 'Output' may be undefined, or defined from star imports: sample.msg
+[0.504s] 	output = Output()
+[0.504s] 	         ^
+[0.504s] 
+[0.504s] ./py_node/node_sample.py:32:1: W191 indentation contains tabs
+[0.504s] 	output.stamp = rospy.get_rostime()
+[0.504s] ^
+[0.504s] 
+[0.504s] ./py_node/node_sample.py:33:1: W191 indentation contains tabs
+[0.504s] 	
+[0.504s] ^
+[0.504s] 
+[0.504s] ./py_node/node_sample.py:33:1: W293 blank line contains whitespace
+[0.504s] 	
+[0.504s] ^
+[0.504s] 
+[0.504s] ./py_node/node_sample.py:34:1: W191 indentation contains tabs
+[0.504s] 	if (data.value > 5):
+[0.504s] ^
+[0.505s] 
+[0.505s] ./py_node/node_sample.py:35:1: W191 indentation contains tabs
+[0.505s] 		output.value = 0
+[0.505s] ^
+[0.505s] 
+[0.505s] ./py_node/node_sample.py:36:1: W191 indentation contains tabs
+[0.505s] 	else:
+[0.505s] ^
+[0.505s] 
+[0.505s] ./py_node/node_sample.py:37:1: W191 indentation contains tabs
+[0.505s] 		output.value = 1
+[0.505s] ^
+[0.505s] 
+[0.505s] ./py_node/node_sample.py:38:1: W191 indentation contains tabs
+[0.505s] 	     
+[0.505s] ^
+[0.505s] 
+[0.505s] ./py_node/node_sample.py:38:1: W293 blank line contains whitespace
+[0.505s] 	     
+[0.505s] ^
+[0.505s] 
+[0.505s] ./py_node/node_sample.py:38:2: E101 indentation contains mixed spaces and tabs
+[0.505s] 	     
+[0.505s] 	^
+[0.505s] 
+[0.505s] ./py_node/node_sample.py:39:1: E101 indentation contains mixed spaces and tabs
+[0.505s]     # Publish output
+[0.505s] ^
+[0.505s] 
+[0.505s] ./py_node/node_sample.py:40:1: W191 indentation contains tabs
+[0.505s] 	output_pub.publish(output)
+[0.505s] ^
+[0.505s] 
+[0.505s] ./py_node/node_sample.py:40:2: F405 'output_pub' may be undefined, or defined from star imports: sample.msg
+[0.505s] 	output_pub.publish(output)
+[0.505s] 	^
+[0.505s] 
+[0.505s] ./py_node/node_sample.py:42:1: E302 expected 2 blank lines, found 1
+[0.505s] def main():
+[0.505s] ^
+[0.505s] 
+[0.505s] ./py_node/node_sample.py:43:1: E101 indentation contains mixed spaces and tabs
+[0.505s]         global output_pub, input_accepted_pub
+[0.505s] ^
+[0.505s] 
+[0.505s] ./py_node/node_sample.py:45:1: E101 indentation contains mixed spaces and tabs
+[0.505s]         # Publishers
+[0.505s] ^
+[0.505s] 
+[0.505s] ./py_node/node_sample.py:46:1: E101 indentation contains mixed spaces and tabs
+[0.505s]         input_accepted_pub = rospy.Publisher('/sample/input_accepted', InputAccepted, queue_size=1)
+[0.505s] ^
+[0.506s] 
+[0.506s] ./py_node/node_sample.py:46:72: F405 'InputAccepted' may be undefined, or defined from star imports: sample.msg
+[0.506s]         input_accepted_pub = rospy.Publisher('/sample/input_accepted', InputAccepted, queue_size=1)
+[0.506s]                                                                        ^
+[0.506s] 
+[0.506s] ./py_node/node_sample.py:47:1: E101 indentation contains mixed spaces and tabs
+[0.506s]         output_pub = rospy.Publisher('/sample/output', Output, queue_size=1)
+[0.506s] ^
+[0.506s] 
+[0.506s] ./py_node/node_sample.py:47:56: F405 'Output' may be undefined, or defined from star imports: sample.msg
+[0.506s]         output_pub = rospy.Publisher('/sample/output', Output, queue_size=1)
+[0.506s]                                                        ^
+[0.506s] 
+[0.506s] ./py_node/node_sample.py:49:1: E101 indentation contains mixed spaces and tabs
+[0.506s]         # Subscribers
+[0.506s] ^
+[0.506s] 
+[0.506s] ./py_node/node_sample.py:50:1: E101 indentation contains mixed spaces and tabs
+[0.506s]         rospy.Subscriber('/sample/input', Input, callback_input, queue_size=1)
+[0.506s] ^
+[0.506s] 
+[0.506s] ./py_node/node_sample.py:50:43: F405 'Input' may be undefined, or defined from star imports: sample.msg
+[0.506s]         rospy.Subscriber('/sample/input', Input, callback_input, queue_size=1)
+[0.506s]                                           ^
+[0.506s] 
+[0.506s] ./py_node/node_sample.py:52:1: E101 indentation contains mixed spaces and tabs
+[0.506s]         # Initialize node
+[0.506s] ^
+[0.506s] 
+[0.506s] ./py_node/node_sample.py:53:1: E101 indentation contains mixed spaces and tabs
+[0.506s]         rospy.init_node('sample', anonymous=True)
+[0.506s] ^
+[0.506s] 
+[0.506s] ./py_node/node_sample.py:54:1: E101 indentation contains mixed spaces and tabs
+[0.506s]         rospy.loginfo("Initialized node 'sample'")
+[0.506s] ^
+[0.506s] 
+[0.506s] ./py_node/node_sample.py:55:1: E101 indentation contains mixed spaces and tabs
+[0.506s]         rospy.spin()
+[0.506s] ^
+[0.506s] 
+[0.506s] ./py_node/node_sample.py:57:1: E305 expected 2 blank lines after class or function definition, found 1
+[0.506s] if __name__ == '__main__':
+[0.506s] ^
+[0.506s] 
+[0.506s] ./py_node/node_sample.py:58:1: E101 indentation contains mixed spaces and tabs
+[0.506s]         try:
+[0.506s] ^
+[0.506s] 
+[0.506s] ./py_node/node_sample.py:59:1: E101 indentation contains mixed spaces and tabs
+[0.506s]                 main()
+[0.506s] ^
+[0.507s] 
+[0.507s] ./py_node/node_sample.py:60:1: E101 indentation contains mixed spaces and tabs
+[0.507s]         except rospy.ROSInterruptException:
+[0.507s] ^
+[0.507s] 
+[0.507s] ./py_node/node_sample.py:61:1: E101 indentation contains mixed spaces and tabs
+[0.507s]                 pass
+[0.507s] ^
+[0.507s] 
+[0.507s] ./py_node/node_sample.py:62:1: W391 blank line at end of file
+[0.507s] 
+[0.507s] ^
+[0.507s] 
+[0.507s] 16    E101 indentation contains mixed spaces and tabs
+[0.507s] 1     E265 block comment should start with '# '
+[0.507s] 2     E302 expected 2 blank lines, found 1
+[0.507s] 1     E305 expected 2 blank lines after class or function definition, found 1
+[0.507s] 1     F401 'time' imported but unused
+[0.507s] 1     F403 'from sample.msg import *' used; unable to detect undefined names
+[0.507s] 7     F405 'InputAccepted' may be undefined, or defined from star imports: sample.msg
+[0.507s] 1     I100 Import statements are in the wrong order. 'import time' should be before 'import rospy' and in a different group.
+[0.507s] 1     I201 Missing newline between import groups. 'import time' is identified as Stdlib and 'import rospy' is identified as Third Party.
+[0.507s] 1     Q000 Double quotes found but single quotes preferred
+[0.507s] 14    W191 indentation contains tabs
+[0.507s] 2     W293 blank line contains whitespace
+[0.507s] 1     W391 blank line at end of file
+[0.507s] 
+[0.507s] 6 files checked
+[0.507s] 49 errors
+[0.507s] 
+[0.507s] 'E'-type errors: 20
+[0.507s] 'F'-type errors: 9
+[0.507s] 'I'-type errors: 2
+[0.507s] 'Q'-type errors: 1
+[0.507s] 'W'-type errors: 17
+[0.507s] 
+[0.507s] Checked files:
+[0.507s] 
+[0.507s] * ./setup.py
+[0.507s] * ./test/test_pep257.py
+[0.507s] * ./test/test_copyright.py
+[0.507s] * ./test/test_flake8.py
+[0.507s] * ./py_node/node_sample.py
+[0.507s] * ./py_node/__init__.py
+[0.507s] ----------------------------- Captured stderr call -----------------------------
+[0.507s] option --max-complexity: please update from optparse string `type=` to argparse callable `type=` -- this will be an error in the future
+[0.507s] option --application-import-names: please update from optparse string `type=` to argparse callable `type=` -- this will be an error in the future
+[0.507s] option --application-package-names: please update from optparse string `type=` to argparse callable `type=` -- this will be an error in the future
+[0.507s] option --import-order-style: please update from optparse string `type=` to argparse callable `type=` -- this will be an error in the future
+[0.507s] option --quotes: please update from optparse string `type=` to argparse callable `type=` -- this will be an error in the future
+[0.507s] option --inline-quotes: please update from optparse string `type=` to argparse callable `type=` -- this will be an error in the future
+[0.507s] option --multiline-quotes: please update from optparse string `type=` to argparse callable `type=` -- this will be an error in the future
+[0.508s] option --docstring-quotes: please update from optparse string `type=` to argparse callable `type=` -- this will be an error in the future
+[0.508s] - generated xml file: /home/alex/git/rc-test-dev/sample/colcon_ws/sample/build/py_node/pytest.xml -
+[0.508s] =========================== short test summary info ============================
+[0.508s] FAILED test/test_flake8.py::test_flake8 - AssertionError: Found 49 code style...
+[0.508s] [31m============== [31m[1m1 failed[0m, [32m1 passed[0m, [33m1 skipped[0m, [33m2 warnings[0m[31m in 0.15s[0m[31m ==============[0m
+[0.508s] [33m=============================== warnings summary ===============================[0m
+[0.508s] test/test_flake8.py::test_flake8
+[0.508s] test/test_flake8.py::test_flake8
+[0.508s]   Warning: SelectableGroups dict interface is deprecated. Use select.
+[0.508s] 
+[0.508s] -- Docs: https://docs.pytest.org/en/stable/warnings.html
+[0.539s] Invoked command in '/home/alex/git/rc-test-dev/sample/colcon_ws/sample/src/py_node' returned '1': AMENT_PREFIX_PATH=/home/alex/git/rc-test-dev/sample/colcon_ws/sample/install/py_node:${AMENT_PREFIX_PATH} PYTEST_ADDOPTS=--tb=short --junit-xml=/home/alex/git/rc-test-dev/sample/colcon_ws/sample/build/py_node/pytest.xml --junit-prefix=py_node -o cache_dir=/home/alex/git/rc-test-dev/sample/colcon_ws/sample/build/py_node/.pytest_cache PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=/home/alex/git/rc-test-dev/sample/colcon_ws/sample/install/py_node/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -m pytest

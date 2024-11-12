@@ -1,0 +1,24 @@
+[0.284s] Invoking command in '/home/alex/git/rc-test-dev/sample/colcon_ws/sample/src/py_node': PYTHONPATH=/home/alex/git/rc-test-dev/sample/colcon_ws/sample/build/py_node/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/alex/git/rc-test-dev/sample/colcon_ws/sample/install/py_node/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/py_node build --build-base /home/alex/git/rc-test-dev/sample/colcon_ws/sample/build/py_node/build install --record /home/alex/git/rc-test-dev/sample/colcon_ws/sample/build/py_node/install.log --single-version-externally-managed install_data
+[0.382s] running egg_info
+[0.382s] writing ../../build/py_node/py_node.egg-info/PKG-INFO
+[0.382s] writing dependency_links to ../../build/py_node/py_node.egg-info/dependency_links.txt
+[0.383s] writing entry points to ../../build/py_node/py_node.egg-info/entry_points.txt
+[0.383s] writing requirements to ../../build/py_node/py_node.egg-info/requires.txt
+[0.383s] writing top-level names to ../../build/py_node/py_node.egg-info/top_level.txt
+[0.384s] reading manifest file '../../build/py_node/py_node.egg-info/SOURCES.txt'
+[0.384s] writing manifest file '../../build/py_node/py_node.egg-info/SOURCES.txt'
+[0.384s] running build
+[0.384s] running build_py
+[0.384s] copying py_node/node_sample.py -> /home/alex/git/rc-test-dev/sample/colcon_ws/sample/build/py_node/build/lib/py_node
+[0.384s] running install
+[0.385s] running install_lib
+[0.385s] copying /home/alex/git/rc-test-dev/sample/colcon_ws/sample/build/py_node/build/lib/py_node/node_sample.py -> /home/alex/git/rc-test-dev/sample/colcon_ws/sample/install/py_node/lib/python3.10/site-packages/py_node
+[0.385s] byte-compiling /home/alex/git/rc-test-dev/sample/colcon_ws/sample/install/py_node/lib/python3.10/site-packages/py_node/node_sample.py to node_sample.cpython-310.pyc
+[0.385s] running install_data
+[0.386s] running install_egg_info
+[0.386s] removing '/home/alex/git/rc-test-dev/sample/colcon_ws/sample/install/py_node/lib/python3.10/site-packages/py_node-0.0.0-py3.10.egg-info' (and everything under it)
+[0.386s] Copying ../../build/py_node/py_node.egg-info to /home/alex/git/rc-test-dev/sample/colcon_ws/sample/install/py_node/lib/python3.10/site-packages/py_node-0.0.0-py3.10.egg-info
+[0.387s] running install_scripts
+[0.395s] Installing node_sample script to /home/alex/git/rc-test-dev/sample/colcon_ws/sample/install/py_node/lib/py_node
+[0.395s] writing list of installed files to '/home/alex/git/rc-test-dev/sample/colcon_ws/sample/build/py_node/install.log'
+[0.407s] Invoked command in '/home/alex/git/rc-test-dev/sample/colcon_ws/sample/src/py_node' returned '0': PYTHONPATH=/home/alex/git/rc-test-dev/sample/colcon_ws/sample/build/py_node/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/alex/git/rc-test-dev/sample/colcon_ws/sample/install/py_node/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/py_node build --build-base /home/alex/git/rc-test-dev/sample/colcon_ws/sample/build/py_node/build install --record /home/alex/git/rc-test-dev/sample/colcon_ws/sample/build/py_node/install.log --single-version-externally-managed install_data
